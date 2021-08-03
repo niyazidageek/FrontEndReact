@@ -1,0 +1,70 @@
+@import './colors.scss';
+@import './mixins.scss';
+
+footer{
+    & .__top{
+       & .__info{
+            background-color: $light-gray;
+            & .container{
+                padding: 5rem;
+                & ul{
+                    justify-content: space-between;
+                    & .__content{
+                        
+                        & i{
+                            margin-right: 1rem;
+                        }
+                        display: flex;
+                        align-items: flex-start;
+                        & .__lettering{
+                            & p:first-child{
+                                font-weight: bold;
+                            }
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .__bottom{
+        & .container{
+            padding: 5rem 0;
+            & ul{
+                flex-direction: column;
+            }
+            & .__input{
+                border-bottom: 1px solid black;
+                display: flex;
+                justify-content: space-between;
+                & input{
+                    border: 0;
+                }
+            }
+            & .__footer-li--collapse{
+                display: none !important;
+                margin: 1.5rem 0;
+            }
+            & .__foter-li--resp{
+                display: none;
+            }
+            & .__collapse-btn{
+                display: flex;
+                justify-content: space-between;
+            }
+           @media screen and (max-width:992px) {
+               & .__footer-li{
+                   display: none;
+               }
+               & .__footer-li--collapse{
+                   display: block !important;
+               }
+               & .__foter-li--resp{
+                   display: block;
+               }
+           }
+            
+        }
+    }
+}

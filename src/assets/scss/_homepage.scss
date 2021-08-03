@@ -1,0 +1,182 @@
+@import "./mixins.scss";
+@import "./colors";
+.__homepage{
+    & .__carousel{
+        & .col-md-6{
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        & .col-12 {
+            width: max-content;
+        }
+        & img{
+            height: 500px;
+        }
+        @media screen and (max-width:768px) {
+            & img{
+                height: 300px;
+            }
+            
+        }
+        & .__btn{
+            border: 2px solid $beige;  
+            color: $beige;   
+            font-weight: bold;
+            text-align: center;
+            width: max-content;
+            padding: 0.5rem;
+            @include transition
+        }
+        & .__btn:hover{
+            border: 2px solid $beige;  
+            color: black;   
+            background-color: $beige;
+            font-weight: bold;
+            text-align: center;
+        }
+    } 
+    & .__popular-this-week{
+        & .col-md-5{
+            @include transition;
+        }
+        & .col-md-5:hover{
+            transform: scale(1.1);
+        }
+        & .col-md-7{
+            position: relative;
+            @include transition;
+        }
+        & .col-md-7:hover{
+            transform: scale(1.1);
+            position: relative;
+            @include transition;
+        }
+        & .__description{
+            width: 200px;
+        }
+        & .__description--float{
+            width: 200px;
+            position: absolute;
+            left: 10%;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        & .col-md-7.--right{
+            & img{
+                margin-left: 3rem;
+            }
+            .__description--float{
+                left: 0%;
+            }
+        }   
+    }
+}
+.__deal-of-week{
+    background-color: $light-blue;
+    padding: 5rem 0;
+    & .container{
+        & .col-sm-6{
+            height: 100%;
+        }
+        & .__title{
+            width: 500px;
+            & h5{
+                color: red;
+            }
+        }
+        & .__discount{
+            padding: 1rem;
+            width: max-content;
+            background-color: red;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+        }
+        & .__timer{
+            align-self: center;
+            width: 100%;
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        & .__shop-button{
+            border: 1px solid black;
+            width: max-content;
+            padding: 0.5rem;
+        }
+        & img{
+            height: 600px;
+        }
+    }
+}
+.__new-arrivals{
+    & .container{
+        padding: 5rem 0;
+        & .row{
+            & .col-md-3{
+                & img{
+                    width: 100%;
+                    display: flex;
+                }
+            }
+            
+        }
+    }
+}
+
+.__summer-sales{
+    padding: 5rem 0;
+    & .container{
+        position: relative;
+        background-color: $light-beige;
+        text-align: center;
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        & h1{
+            font-size: 5rem;
+            font-weight: bold;
+        }
+        & p{
+            font-size: 2rem;
+        }
+        & .__shopping-btn{
+            border: 1px solid black;
+            width: max-content;
+            align-self: center;
+            padding: 1rem;
+        }
+        & img{
+            right: 0;
+            bottom: 10%;
+            position: absolute;
+            height: 430px;
+        }
+    }
+}
+// .__info{
+//     background-color: $light-gray;
+//     & .container{
+//         padding: 5rem 0;
+//         & ul{
+//             justify-content: space-between;
+//             & .__content{
+//                 justify-content: center;
+//                 & i{
+//                     margin-right: 1rem;
+//                 }
+//                 display: flex;
+//                 align-items: flex-start;
+//                 & .__lettering{
+//                     & p:first-child{
+//                         font-weight: bold;
+//                     }
+//                     display: flex;
+//                     flex-direction: column;
+//                 }
+//             }
+//         }
+//     }
+// }

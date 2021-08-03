@@ -1,0 +1,11 @@
+@import "./_header.scss";
+@import "./homepage.scss";
+@import './footer.scss';
+*{
+    ul{
+        display: flex;
+        margin:0 !important;
+        padding: 0 !important;
+        list-style: none;
+    }
+}
