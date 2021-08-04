@@ -40,13 +40,29 @@
     & .__popular-this-week{
         & .col-md-5{
             @include transition;
+
+            & img{
+                height: 400px;
+            }
+            margin-bottom: 4rem;
         }
         & .col-md-5:hover{
             transform: scale(1.1);
         }
         & .col-md-7{
+            @media screen and (max-width:768px) {
+                & {
+                    // display: unset !important;
+                }
+            }
+            display: flex;
+            justify-content: flex-end;
             position: relative;
             @include transition;
+            margin-bottom: 4rem;
+            &  img{
+                height: 550px;
+            }
         }
         & .col-md-7:hover{
             transform: scale(1.1);
@@ -59,7 +75,7 @@
         & .__description--float{
             width: 200px;
             position: absolute;
-            left: 10%;
+            left: 5% !important;
             top:50%;
             transform: translateY(-50%);
         }
@@ -70,7 +86,26 @@
             .__description--float{
                 left: 0%;
             }
-        }   
+        }  
+        @media screen and (max-width:768px) {
+            & .col-md-7.--right{
+                & img{
+                    margin: 0;
+                }
+            }
+        }
+        @media screen and (max-width:1200px) {
+            & .col-md-7{
+                &  img{
+                    height: 300px;
+                }
+            }
+            & .col-md-5{
+                & img{
+                    height: 300px;
+                }
+            }
+        }
     }
 }
 .__deal-of-week{
@@ -78,10 +113,13 @@
     padding: 5rem 0;
     & .container{
         & .col-sm-6{
-            height: 100%;
+            height: max-content;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
         & .__title{
-            width: 500px;
+            width: 100%;
             & h5{
                 color: red;
             }
@@ -109,13 +147,22 @@
         & img{
             height: 600px;
         }
+        @media screen and (max-width:768px){
+            & img{
+                height: unset;
+                width: 240px;
+            }
+        }
+
     }
 }
 .__new-arrivals{
     & .container{
         padding: 5rem 0;
         & .row{
-            & .col-md-3{
+            justify-self: center;
+            width: 100%;
+             .col-xl-3, .col-md-4{
                 & img{
                     width: 100%;
                     display: flex;
@@ -136,10 +183,12 @@
         display: flex;
         flex-direction: column;
         & h1{
+            z-index: 2;
             font-size: 5rem;
             font-weight: bold;
         }
         & p{
+            z-index: 2;
             font-size: 2rem;
         }
         & .__shopping-btn{
@@ -154,29 +203,10 @@
             position: absolute;
             height: 430px;
         }
+        @media screen and (max-width:768px) {
+            & img{
+                display: none;
+            }
+        }
     }
 }
-// .__info{
-//     background-color: $light-gray;
-//     & .container{
-//         padding: 5rem 0;
-//         & ul{
-//             justify-content: space-between;
-//             & .__content{
-//                 justify-content: center;
-//                 & i{
-//                     margin-right: 1rem;
-//                 }
-//                 display: flex;
-//                 align-items: flex-start;
-//                 & .__lettering{
-//                     & p:first-child{
-//                         font-weight: bold;
-//                     }
-//                     display: flex;
-//                     flex-direction: column;
-//                 }
-//             }
-//         }
-//     }
-// }
