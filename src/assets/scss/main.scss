@@ -1,7 +1,9 @@
 @import "./_header.scss";
 @import "./homepage.scss";
 @import './footer.scss';
-@import "./blogpage";
+@import "./blogpage.scss";
+@import './about.scss';
+
 *{
     ul{
         display: flex;
