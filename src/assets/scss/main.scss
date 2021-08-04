@@ -3,7 +3,6 @@
 @import './footer.scss';
 @import "./blogpage.scss";
 @import './about.scss';
-
 *{
     ul{
         display: flex;
@@ -11,4 +10,5 @@
         padding: 0 !important;
         list-style: none;
     }
+    
 }

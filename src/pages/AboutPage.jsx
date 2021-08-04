@@ -69,15 +69,15 @@ const AboutPage = () => {
             <div className="__section-milestone">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6 col-12">
+                        <div className="col-lg-6 col-12">
                             <h1>Varkala's Milestones</h1>
                             <p>
                                 One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections
                             </p>
                         </div>
-                        <div className="col-5">
+                        <div className="col-lg-5 col-12">
                             <div className="row">
-                                <div className="col-6">
+                                <div className="col-sm-6 col-12">
                                     <h3>
                                         1995
                                     </h3>
@@ -85,7 +85,7 @@ const AboutPage = () => {
                                         One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin
                                     </span>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-sm-6 col-12">
                                     <h3>
                                         1995
                                     </h3>
@@ -93,7 +93,7 @@ const AboutPage = () => {
                                         One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin
                                     </span>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-sm-6 col-12">
                                     <h3>
                                         1995
                                     </h3>
@@ -101,7 +101,7 @@ const AboutPage = () => {
                                         One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin
                                     </span>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-sm-6 col-12">
                                     <h3>
                                         1995
                                     </h3>
@@ -118,12 +118,12 @@ const AboutPage = () => {
             <div className="__section-founder">
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-lg-5 col-12">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-0.jpg" alt="" />
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-12">
                             <p>
                                 Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
                             </p>
@@ -140,7 +140,7 @@ const AboutPage = () => {
                         <div className="col-2">
                             <div className="line"></div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-xl-6 col-12">
                             <h5>OUR TEAM</h5>
                             <h1>People</h1>
                             <p>He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.</p>
@@ -148,7 +148,7 @@ const AboutPage = () => {
                     </div>
 
                     <div className="row">
-                    <div className="col-3">
+                    <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -157,7 +157,7 @@ const AboutPage = () => {
                             <span>CEO & Founder</span>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -166,7 +166,7 @@ const AboutPage = () => {
                             <span>CEO & Founder</span>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -175,7 +175,7 @@ const AboutPage = () => {
                             <span>CEO & Founder</span>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -184,7 +184,7 @@ const AboutPage = () => {
                             <span>CEO & Founder</span>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -193,7 +193,7 @@ const AboutPage = () => {
                             <span>CEO & Founder</span>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -202,7 +202,7 @@ const AboutPage = () => {
                             <span>CEO & Founder</span>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -211,7 +211,7 @@ const AboutPage = () => {
                             <span>CEO & Founder</span>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 col-6">
                             <div className="__content">
                             <div className="__img-container">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
@@ -255,10 +255,10 @@ const AboutPage = () => {
                             At Varkala, we want the right choice to be as easy as putting on a great T-shirt
                             </h1>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-12">
                             <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections</p>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-12">
                             <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream.</p>
                         </div>
                     </div>

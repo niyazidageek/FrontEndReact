@@ -29,6 +29,9 @@ footer{
         }
     }
     & .__bottom{
+        & .row{
+            width: 100%;
+        }
         & .container{
             padding: 5rem 0;
             & ul{

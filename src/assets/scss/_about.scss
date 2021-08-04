@@ -9,6 +9,7 @@
                 justify-content: space-between;
             }
             & .row{
+                width: 100%;
                 margin-top: 6rem;
                 & .col-2{
                     & .line{
@@ -44,13 +45,6 @@
                         font-size: 2rem;
                     }
                 }
-                // @media screen and (max-width:992px) {
-                //     & .col-8{
-                //         & h1{
-                //             font-size: unset;
-                //         }
-                //     }
-                // }
                 & .col-5{
                     & img{
                         width: 100%;
@@ -71,7 +65,7 @@
     & .__section-milestone{
         background-color: $light-gray;
         & .container{
-            padding: 5rem 0;
+            padding: 5rem 1rem;
             & .row{
                 width: 100%;
                 justify-content: space-between;
@@ -93,22 +87,25 @@
     }
     & .__section-founder{
         & .container{
-            padding: 5rem 0;
-            & .col-6{
+            & .row{
+                width: 100%;
+            }
+            padding: 5rem 1rem;
+            & .col-lg-5{
                 display: flex;
                 justify-content: center;
             }
-            & .col-6:last-child{
+            & .col-lg-6{
                 flex-direction: column;
             }
             & .__img-container{
+                height: max-content;
                 display: inline-block;
                 overflow: hidden;
                 border-radius: 50%;
                 & img{
                     width: 350px;
                 }
-                // border-radius: 50%;
                 overflow: hidden;
             }
             & h5{
@@ -122,14 +119,24 @@
 
     & .__section-people{
        & .container{
-            padding: 5rem 0;
+           & .row{
+                width: 100%;
+           }
+            padding: 5rem 1rem;
             & .col-2{
-                margin-right: 3rem;
-                display: flex;
-                justify-content: flex-start;
-                width: 70px;
-                height: 1px;
-                background-color: red;
+                & .line{
+                    margin-right: 3rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 70px;
+                    height: 1px;
+                    background-color: red;
+                }
+            }
+            @media screen and (max-width:1200px) {
+                &  .col-2{
+                    display: none !important;
+                }
             }
             & .col-6{
                 & h1{
@@ -141,7 +148,7 @@
             }
             & .row{
                 margin-top: 5rem;
-                & .col-3{
+                & .col-md-3, .col-6{
                     margin-bottom: 5rem;
                     display: flex;
                     justify-content: center;
@@ -163,15 +170,19 @@
     }
     & .__section-carousel{
         & .container{
-            padding: 5rem 0;
+            padding: 5rem 1rem;
             & img{
-                height: 150px;
+                height: 100%;
+                margin: 0 1rem;
             }
         }
         background-color: $light-gray;
     }
 
     & .__section-last{
+        & .row{
+            width: 100%;
+        }
         & .container{
             padding: 5rem 0;
             & h1{
