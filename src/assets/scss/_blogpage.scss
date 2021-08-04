@@ -1,0 +1,63 @@
+@import "./mixins";
+@import "./colors.scss";
+
+.__blogpage{
+    & .__blog-section{
+        background-image: url(https://demo.bootstrapious.com/varkala/1-2-1/img/photo/blog-2.jpg);
+        padding-top: 3rem;
+        background-attachment: fixed;
+        background-position-y: 70%;
+        background-position-x: 50%;
+        & .container{
+            padding: 5rem 0;
+            & .__text-holder{
+                & h1{
+                    font-size: 4rem;
+                    font-weight: bold;
+                    margin-bottom: 4rem;
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                margin: 5rem 0;
+            }
+        }
+    }
+    & .__text-holder{
+        & .container{
+            padding: 5rem 0;
+        }
+    }
+    & .row{
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & .col-4{
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin:4rem 0;
+                .caption{
+                    width: max-content;
+                }
+            }
+            padding: 5rem 0;
+            & img{
+                width: 300px;
+            }
+            @media screen and (max-width:576px) {
+                & img{
+                    width: 100%;
+                }
+            }
+            .caption{
+                padding-right: 2rem;
+            }
+        }
+        }
+}

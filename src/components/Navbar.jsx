@@ -15,12 +15,12 @@ const Navbar = () => {
 
     const MenuButton = () => {
         return (
-            <i id="menubutton" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"   className="__menu-btn fas fa-bars fa-2x" style={{ alignSelf: 'end' }}></i>
+            <i id="menubutton" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"   className="__menu-btn fas fa-bars fa-2x" style={{ alignSelf: 'end'}}></i>
         )
     }
 
     const SearchInput = () => {
-        const style = { border: 'unset', borderBottom: '1px solid black', boxShadow: 'unset', borderRadius: 'unset', marginRight: '2rem' }
+        const style = { border: 'unset', borderBottom: '1px solid black', boxShadow: 'unset', borderRadius: 'unset', marginRight: '2rem', backgroundColor:'transparent' }
         return (
             <input type="search" placeholder="Search" aria-label="Search" style={style} />
         )
@@ -130,7 +130,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <i className=" __menu-btn fas fa-bars fa-2x" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"  style={{ alignSelf: 'end', color:"black"}}></i>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{backgroundColor:'white', zIndex:'10'}}>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{backgroundColor:'transparent', zIndex:'10'}}>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <HomeDrop />
                         <ShopDrop />

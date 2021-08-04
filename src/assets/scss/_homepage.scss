@@ -50,11 +50,6 @@
             transform: scale(1.1);
         }
         & .col-md-7{
-            @media screen and (max-width:768px) {
-                & {
-                    // display: unset !important;
-                }
-            }
             display: flex;
             justify-content: flex-end;
             position: relative;
