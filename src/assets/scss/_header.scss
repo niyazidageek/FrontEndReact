@@ -76,6 +76,13 @@ header{
         }
     }
     & .__bottom{
+        .navbar-expand-lg{
+            transition: all 100ms linear;
+        }
+        #navbarSupportedContent{
+            width: 100vw !important;
+            @include transition;
+        }
         display: flex;
         position: absolute;
         height: 50px;

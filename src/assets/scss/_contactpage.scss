@@ -1,0 +1,90 @@
+@import './colors.scss';
+@import './mixins.scss';
+
+.__contact-page{
+    & .__section-contact{
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url('https://demo.bootstrapious.com/varkala/1-2-1/img/photo/maarten-deckers-0-frPETzEVs-unsplash.jpg');
+        & .container{
+            padding: 5rem 0;
+            & .__text-holder{
+                padding: 5rem 0;
+                margin: 5rem 0;
+                & h1{
+                    margin-bottom: 4rem;
+                    text-align: center;
+                    font-size: 4rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    & .__section-address{
+        .container{
+            padding: 5rem 0;
+            & .row{
+                justify-content: space-between;
+            }
+        }
+    }
+    & .__section-map{
+        background-color: lightgray;
+        & .row{
+            width: 100%;
+        }
+    }
+    
+    & .__section-form{
+        & .container{
+            & textarea{
+                width: 100%;
+                border: 0;
+                border-bottom: 1px solid black;
+            }
+            & input{
+                margin-bottom: 1rem;
+                width: 100%;
+                border: 0;
+                border-bottom: 1px solid black;
+            }
+            & .col-6{
+                & .row{
+                    height: 100%;
+                    justify-content: space-between;
+                }
+            }
+            & .__message-btn{
+                margin-top: 1rem;
+                color: $beige;
+                padding: 0.5rem;
+                width: max-content;
+                border: 1px solid $beige;
+                @include transition;
+            }
+            & .__message-btn:hover{
+                color: black;
+                background-color: $beige;
+            }
+            & h1{
+                width: 50%;
+                font-size: 5rem;
+                margin-bottom: 2rem;
+                font-weight: bold;
+            }
+            padding: 5rem 0;
+            & i{
+                color: $beige;
+                margin-right: 2rem;
+                @include  transition;
+            }
+            & i:hover{
+                color: $dark-beige;
+            }
+            
+        }
+    }
+    
+}
+
+
