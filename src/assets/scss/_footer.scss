@@ -29,11 +29,14 @@ footer{
         }
     }
     & .__bottom{
+        & .card-body{
+            border: 0;
+        }
         & .row{
             width: 100%;
         }
         & .container{
-            padding: 5rem 0;
+            padding: 5rem 1rem;
             & ul{
                 flex-direction: column;
             }

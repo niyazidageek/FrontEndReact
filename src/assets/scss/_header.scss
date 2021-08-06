@@ -1,5 +1,14 @@
 @import "./mixins.scss";
 @import "./colors";
+
+.__basket-menu{
+    width: 500px;
+}
+@media screen and (max-width:768px) {
+    .__basket-menu{
+        width: 100vw !important;
+    }
+}
 header{
     position: relative;
     & .__top{
@@ -27,7 +36,12 @@ header{
                 }
             }
         }
+        
         @media screen and (max-width:768px) {
+            .__basket-menu{
+                width: 100% !important;
+            }
+
             & .__left{
                 display: none;
             }
@@ -80,7 +94,7 @@ header{
             transition: all 100ms linear;
         }
         #navbarSupportedContent{
-            width: 100vw !important;
+            padding:  1rem;
             @include transition;
         }
         display: flex;

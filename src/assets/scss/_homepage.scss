@@ -37,72 +37,117 @@
             text-align: center;
         }
     } 
-    & .__popular-this-week{
-        & .col-md-5{
-            @include transition;
 
-            & img{
-                height: 400px;
-            }
-            margin-bottom: 4rem;
-        }
-        & .col-md-5:hover{
-            transform: scale(1.1);
-        }
+
+
+    & .__popular-this-week{
+
         & .col-md-7{
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
-            @include transition;
-            margin-bottom: 4rem;
-            &  img{
-                height: 550px;
-            }
-        }
-        & .col-md-7:hover{
-            transform: scale(1.1);
-            position: relative;
-            @include transition;
-        }
-        & .__description{
-            width: 200px;
-        }
-        & .__description--float{
-            width: 200px;
-            position: absolute;
-            left: 5% !important;
-            top:50%;
-            transform: translateY(-50%);
-        }
-        & .col-md-7.--right{
+            justify-content: center;
             & img{
-                margin-left: 3rem;
-            }
-            .__description--float{
-                left: 0%;
-            }
-        }  
-        @media screen and (max-width:768px) {
-            & .col-md-7.--right{
-                & img{
-                    margin: 0;
-                }
+                margin-left: 1rem;
             }
         }
-        @media screen and (max-width:1200px) {
-            & .col-md-7{
-                &  img{
-                    height: 300px;
-                }
+
+        & .col-12{
+            position: relative;
+            @include transition;
+            & img{
+                width: 100%;
             }
-            & .col-md-5{
-                & img{
-                    height: 300px;
-                }
+            & .__description--float{
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+                left: 0.5rem;
             }
+            @include transition;
         }
+
+        & .col-12:hover{
+            transform: scale(1.05);
+        }
+        
     }
+
+
+
+    // & .__popular-this-week{
+    //     & .col-md-5{
+    //         @include transition;
+
+    //         & img{
+    //             height: 400px;
+    //         }
+    //         margin-bottom: 4rem;
+    //     }
+    //     & .col-md-5:hover{
+    //         transform: scale(1.1);
+    //     }
+    //     & .col-md-7{
+    //         display: flex;
+    //         justify-content: flex-end;
+    //         position: relative;
+    //         @include transition;
+    //         margin-bottom: 4rem;
+    //         &  img{
+    //             height: 550px;
+    //         }
+    //     }
+    //     & .col-md-7:hover{
+    //         transform: scale(1.1);
+    //         position: relative;
+    //         @include transition;
+    //     }
+    //     & .__description{
+    //         width: 200px;
+    //     }
+    //     & .__description--float{
+    //         width: 200px;
+    //         position: absolute;
+    //         left: 5% !important;
+    //         top:50%;
+    //         transform: translateY(-50%);
+    //     }
+    //     & .col-md-7.--right{
+    //         & img{
+    //             margin-left: 3rem;
+    //         }
+    //         .__description--float{
+    //             left: 0%;
+    //         }
+    //     }  
+    //     @media screen and (max-width:768px) {
+    //         & .col-md-7.--right{
+    //             & img{
+    //                 margin: 0;
+    //             }
+    //         }
+    //     }
+    //     @media screen and (max-width:1200px) {
+    //         & .col-md-7{
+    //             display: flex;
+    //             justify-content: center;
+    //             flex-direction: column;
+    //             &  img{
+    //                 height: 300px;
+    //             }
+    //         }
+    //         & .col-md-5{
+    //             & img{
+    //                 height: 300px;
+    //             }
+    //         }
+    //     }
+    // }
 }
+
+
+
+
+
+
+
 .__deal-of-week{
     background-color: $light-blue;
     padding: 5rem 0;
@@ -117,9 +162,14 @@
             width: 100%;
             & h5{
                 color: red;
+                margin-bottom: 1rem;
+            }
+            & h1{
+                margin-bottom: 1rem;
             }
         }
         & .__discount{
+            margin: 1rem 0;
             padding: 1rem;
             width: max-content;
             background-color: red;
@@ -135,6 +185,7 @@
             text-align: center;
         }
         & .__shop-button{
+            margin: 1rem 0;
             border: 1px solid black;
             width: max-content;
             padding: 0.5rem;
@@ -154,16 +205,51 @@
 .__new-arrivals{
     & .container{
         padding: 5rem 0;
-        & .row{
-            justify-self: center;
-            width: 100%;
-             .col-xl-3, .col-md-4{
-                & img{
-                    width: 100%;
-                    display: flex;
-                }
+        & .__title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & h2{
+                width: 100%;
             }
-            
+            & .row{
+                width: 100%;
+                & .col-xl-3:hover .__bottom{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                & .col-xl-3 {
+                    
+                    & .__bottom{
+                        padding: 0 1rem;
+                        & li{
+                            margin: 0 0.5rem;
+                        }
+                        align-items: center;
+                        justify-content: space-between;
+                        display: flex;
+                        bottom: 0;
+                        position: absolute;
+                        @include transition;
+                        width: 100%;
+                        background-color: white;
+                        height: 40px;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                    & .__img-container{
+                        position: relative;
+                        width: 100%;
+                        & img{
+                            width: 100%;
+                            display: flex;
+                        }
+                    }
+                    
+                }
+                
+            }
         }
     }
 }

@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
 import MenuButtonDesktop from './MenuButtonDesktop';
 import { useCart } from 'react-use-cart';
-import { useTimer } from 'react-timer-hook';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import { makeStyles } from '@material-ui/core/styles';
+import Fade from '@material-ui/core/Fade';
+import BasketButton from './BasketButton';
 
-
+const useStyles = makeStyles((theme) => ({
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    paper: {
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(2, 4, 3),
+    },
+}));
 
 const Navbar = () => {
-    
+
     const {
         items,
         isEmpty,
@@ -17,30 +31,20 @@ const Navbar = () => {
         removeItem,
         emptyCart
 
-     } = useCart()
-        
+    } = useCart()
 
+    const classes = useStyles();
     const [color, setColor] = useState('transparent')
+    const [open, setOpen] = useState(false);
 
-    // const Menu = () => {
-    //     return (
-    //         <div className="collapse" id="collapseExample" style={{ position: 'absolute' }}>
-    //             <div className="card card-body align-items-start">
-    //                 <MenuButton />
-    //                 <p>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</p>
-    //             </div>
-    //         </div>
-    //     )
-    // }
+    const handleOpen = () => {
+        setOpen(true);
+    };
 
-    // const HandleClickMenu = () => {
-    //     if(clicked==false){
-    //         setClicked(prev=>prev = true)
-    //     }
-    //     else{
-    //         setClicked(prev=>prev=false)
-    //     }
-    // }
+    const handleClose = () => {
+        setOpen(false);
+    };
+
 
     const HandleClickResponsive = () => {
         if (color == 'transparent') {
@@ -51,24 +55,6 @@ const Navbar = () => {
         }
     }
 
-    // const Menu = () => {
-    //     if(clicked==true){
-    //         return(
-    //             <div className="menu-desktop" style={{height:'150vh', position:'absolute', backgroundColor:'white', zIndex:'1'}}>
-    //                 <h3 style={{zIndex:'13'}}>saamaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h3>
-    //                 <h4>eekm</h4>
-    //             </div>
-    //         )
-    //     }
-    //     else{
-    //         return <div></div>
-    //     }
-
-    // }
-
-
-
-    
     const SearchInput = () => {
         const style = { border: 'unset', borderBottom: '1px solid black', boxShadow: 'unset', borderRadius: 'unset', marginRight: '2rem', backgroundColor: 'transparent' }
         return (
@@ -171,11 +157,7 @@ const Navbar = () => {
                             </i>
                         </li>
                         <li>
-                            <i className="fas fa-shopping-bag fa-lg">
-                                <span className="__badge-cart position-absolute translate-middle badge">
-                                    99
-                                </span>
-                            </i>
+                        <BasketButton/>
                         </li>
                     </ul>
                 </div>
@@ -203,18 +185,13 @@ const Navbar = () => {
                                     </i>
                                 </li>
                                 <li>
-                                    <i className="fas fa-shopping-bag fa-lg">
-                                        <span className="__badge-cart position-absolute translate-middle badge">
-                                            {cartTotal}
-                                        </span>
-                                    </i>
+                                    <BasketButton/>
+                                    
                                 </li>
                             </ul>
                         </div>
-                        {/* <Menu styles={styles} customBurgerIcon={<i id="menubutton" className="__menu-btn fas fa-bars fa-2x" style={{ alignSelf: 'end' }}></i>}>
-                            <a id="home" className="menu-item" href="/">Home</a>
-                        </Menu> */}
                         <MenuButtonDesktop />
+
                         
                     </form>
                 </div>

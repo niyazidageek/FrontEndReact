@@ -4,6 +4,26 @@
 @import "./blogpage.scss";
 @import './about.scss';
 @import './contactpage.scss';
+@import './cart';
+@import './cartpage.scss';
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: dimgray; 
+  }
 
 *{
     ul{

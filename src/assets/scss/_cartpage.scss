@@ -1,0 +1,15 @@
+@import './mixins.scss';
+@import './colors.scss';
+
+.__cart-page{
+    & .__section-cart{
+        padding: 5rem 0;
+        & .__text-holder{
+            margin: 5rem 0;
+            & h1{
+                margin-bottom: 2rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
