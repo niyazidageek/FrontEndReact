@@ -6,6 +6,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
 import BasketButton from './BasketButton';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -143,7 +144,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light w-100" style={{ backgroundColor: `${color}` }}>
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Varkala</a>
+                <Link to="/" className="navbar-brand" href="#">Varkala</Link>
                 <div className="__buttons" id="buttons-responsive">
                     <ul>
                         <li>

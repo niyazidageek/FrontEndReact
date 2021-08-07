@@ -40,6 +40,24 @@ const BasketButton = () => {
                     <ListItem style={{justifyContent:'center'}}>
                         <h1 className="text-center">Cart is empty</h1>
                     </ListItem>
+                    <ListItem>
+                    <div className="cart-menu">
+                    <div className="__checkout">
+                                <div className="__upper-section">
+                                    <h2>Subtotal :</h2>
+                                    <h2>${cartTotal}</h2>
+                                </div>
+                                <div className="__buttons">
+                                    <Link to="/cart" className="__btn" style={{textDecoration:'none', color:'unset'}}>
+                                        <h4>VIEW CART</h4>
+                                    </Link>
+                                    <div className="__btn">
+                                        <h4>CHECKOUT</h4>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </ListItem>
                 </List>
 
             </SwipeableDrawer>
@@ -66,7 +84,7 @@ const BasketButton = () => {
                     <ListItem style={{ justifyContent: 'flex-end' }}>
                         <i onClick={() => setOpen(false)} className="fas fa-times fa-2x"></i>
                     </ListItem>
-
+                   
                     <ListItem>
                         <div className="cart-menu">
                             <ul className="__cart" style={{ flexDirection: 'column' }}>

@@ -5,7 +5,9 @@ import { useCart } from 'react-use-cart';
 
 const CartPage = () => {
 
+    const [tax, setTax] = useState(0)
     const [word, setWord] = useState('')
+    const [emptyWord, setEmptyWord] = useState('')
     const {
         items,
         isEmpty,
@@ -18,6 +20,16 @@ const CartPage = () => {
 
     } = useCart()
 
+    useEffect(()=>{
+        if(totalUniqueItems>=1){
+            setTax(prev=>prev = 10)
+            setEmptyWord(prev=>prev='')
+        }
+        else{
+            setTax(prev=>prev = 0)
+            setEmptyWord(prev=>prev='Your cart is empty')
+        }
+    })
     useEffect(() => {
         if (totalUniqueItems == 1) {
             setWord(prev => prev = 'item')
@@ -40,7 +52,8 @@ const CartPage = () => {
                     <div className="__section-summary">
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-8 col-12">
+                                <div className="col-lg-8 col-12 __products">
+                                    <h1 id="isempty">{emptyWord}<i class="fas fa-shopping-cart"></i></h1>
                                     {
                                         items.map((item, index) => {
                                             const { name, img, price, id, quantity } = item
@@ -88,8 +101,43 @@ const CartPage = () => {
                                         })
                                     }
                                 </div>
-                                <div className="col-4">
-
+                                <div className="col-lg-4 col-12 __order-summary">
+                                    <div className="row">
+                                        <div className="col-12 __header">
+                                            <div className="container">
+                                                <h5>Order summary</h5>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 __text">
+                                            <div className="container">
+                                                <p>Shipping and additional costs are calculated based on values you have entered.</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 __subtotal">
+                                            <div className="container">
+                                            <h5>Order Subtotal</h5>
+                                            <span>${cartTotal}.00</span>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 __shipping">
+                                            <div className="container">
+                                            <h5>Shipping and handling</h5>
+                                            <span>$10.00</span>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 __tax">
+                                            <div className="container">
+                                            <h5>Tax</h5>
+                                            <span>$0.00</span>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 __total">
+                                            <div className="container">
+                                            <h5>Total</h5>
+                                            <span>${cartTotal+tax}.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
