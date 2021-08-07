@@ -12,4 +12,94 @@
             }
         }
     }
+    & .__section-summary{
+        & .container{
+            .close-button-up{
+                display: none;
+            }
+            .text-responsive{
+                display: none;
+            }
+            @media screen and (max-width:768px) {
+                .text-responsive{
+                    display: block;
+                }
+                .close-button-up{
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                .close-button-bottom{
+                    display: none;
+                }
+            }
+            padding: 5rem 0;
+            & .__product{
+                justify-content: space-between;
+                & .__left{
+                    display: flex;
+                    & .__description{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        & h5, p{
+                            margin: unset;
+                        }
+                    }
+                    & img{
+                        width: 150px;
+                    }
+                }
+                & .responsive-left{
+                    display: none;
+                }
+                & .responsive-right{
+                    display: none;
+                }
+
+                & .__right{
+                    @media screen and (max-width:768px) {
+                        .desktop{
+                            display: none !important;
+                        }
+                        & .responsive-right{
+                            display: block;
+                        }
+                        & .responsive-left{
+                            display: block;
+                        }
+                        & .__counter{
+                            justify-content: flex-end !important;
+                        }
+                        & .responsive-right{
+                            text-align: end;
+                        }
+                        & .responsive-left{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        
+                    }
+                    display: flex;
+                    justify-content: space-between;
+                    & h4{
+                        justify-content: space-between;
+                        margin: unset;
+                    }
+                    display: flex;
+                    align-items: center;
+                    & .__counter{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        & .__number{
+                            margin: 0 1rem;
+                            padding: 0.2rem 2rem;
+                            border: 1px solid black;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

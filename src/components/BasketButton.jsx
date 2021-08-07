@@ -3,6 +3,7 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import { useCart } from 'react-use-cart';
+import { Link } from 'react-router-dom';
 
 const BasketButton = () => {
     const [open, setOpen] = useState(false)
@@ -104,9 +105,9 @@ const BasketButton = () => {
                                     <h2>${cartTotal}</h2>
                                 </div>
                                 <div className="__buttons">
-                                    <div className="__btn">
+                                    <Link to="/cart" className="__btn" style={{textDecoration:'none', color:'unset'}}>
                                         <h4>VIEW CART</h4>
-                                    </div>
+                                    </Link>
                                     <div className="__btn">
                                         <h4>CHECKOUT</h4>
                                     </div>
