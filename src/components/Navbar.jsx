@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
 import BasketButton from './BasketButton';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Navbar = () => {
+const Navbar = ({wishcount}) => {
 
     const {
         items,
@@ -33,7 +34,6 @@ const Navbar = () => {
         emptyCart
 
     } = useCart()
-
     const classes = useStyles();
     const [color, setColor] = useState('transparent')
     const [open, setOpen] = useState(false);
@@ -153,7 +153,7 @@ const Navbar = () => {
                         <li>
                             <i className="far fa-heart fa-lg">
                                 <span className="__badge-cart position-absolute translate-middle badge">
-                                    1
+                                    {wishcount}
                                 </span>
                             </i>
                         </li>
@@ -181,7 +181,7 @@ const Navbar = () => {
                                 <li>
                                     <i className="far fa-heart fa-lg">
                                         <span className="__badge-cart position-absolute translate-middle badge">
-                                            1
+                                            {wishcount}
                                         </span>
                                     </i>
                                 </li>

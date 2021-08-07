@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from '../components/Header';
 import Carousel from 'react-elastic-carousel';
 import Footer from '../components/Footer';
 import { useTimer } from 'react-timer-hook';
 import products from '../mocks/products';
 import { useCart } from 'react-use-cart';
+
+
 
 const BreakPoints = [
     { width: 1, itemsToShow: 1 }
@@ -45,16 +47,42 @@ function MyTimer({ expiryTimestamp }) {
     )
 }
 
-const HomePage = () => {
 
+
+const HomePage = () => {
+    const [clicked, setClicked] = useState(false)
+    function addToWishlist(item){
+        setClicked(prev=>prev=!prev)
+        var parsedArray = JSON.parse(localStorage.getItem('wishlist')) || [];
+        if(parsedArray.some(element=>element.id==item.id)){
+            console.log('already')
+            var filteredArray = parsedArray.filter(element=>element.id !== item.id)
+            console.log(filteredArray)
+            localStorage.setItem('wishlist', JSON.stringify(filteredArray))
+        }
+        else{
+            parsedArray.push(item);
+            localStorage.setItem('wishlist', JSON.stringify(parsedArray));
+        }
+    }
     const {addItem} = useCart()
     const time = new Date();
     time.setHours(337)
-
+    const [wishCount, setWishCount] = useState(0)
+    useEffect(()=>{
+        var parsedArray = JSON.parse(localStorage.getItem('wishlist'))
+        if(parsedArray==null){
+            setWishCount(prev=>prev=0)
+        }
+        else{
+            setWishCount(prev=>prev=parsedArray.length)
+        }
+        console.log(wishCount)
+    },[clicked])
 
     return (
         <>
-            <Header />
+            <Header wishcount={wishCount}/>
             <div className="container __homepage">
                 <Carousel className="__carousel" style={{ paddingTop: '4rem' }} breakPoints={BreakPoints}>
                     <div className="row">
@@ -204,14 +232,13 @@ const HomePage = () => {
                                                 <div className="__bottom">
                                                     <span onClick={()=>addItem(item)}>Add to cart</span>
                                                     <ul>
-                                                        <li><i class="far fa-heart"></i></li>
+                                                        <li onClick={()=>addToWishlist(item)}><i class="far fa-heart"></i></li>
                                                         <li><i class="fas fa-expand-arrows-alt"></i></li>
                                                     </ul>
                                                 </div>
                                             </div> 
                                             <h5>{name}</h5>
                                             <span>${price}</span>
-                                            
                                         </div>
                                     )
                                 })

@@ -23,8 +23,8 @@ export const LeftHeader = ({style}) => {
     )
 }
 
-const Header = () => {
-
+const Header = ({wishcount}) => {
+    console.log(wishcount)
     return (
         <header>
             <div className="__top">
@@ -44,7 +44,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="__bottom">
-                <Navbar />
+                <Navbar wishcount={wishcount} />
             </div>
         </header>
     );
