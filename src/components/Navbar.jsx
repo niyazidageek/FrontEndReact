@@ -1,42 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import MenuButtonDesktop from './MenuButtonDesktop';
-import { useCart } from 'react-use-cart';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import { makeStyles } from '@material-ui/core/styles';
-import Fade from '@material-ui/core/Fade';
 import BasketButton from './BasketButton';
 import { Link } from 'react-router-dom';
+import LoginModal from './LoginModal';
 
-const useStyles = makeStyles((theme) => ({
-    modal: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    paper: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(2, 4, 3),
-    },
-}));
 
 const Navbar = () => {
 
-    const {
-        items,
-        isEmpty,
-        totalUniqueItems,
-        totalItems,
-        cartTotal,
-        updateItemQuantity,
-        removeItem,
-        emptyCart
-
-    } = useCart()
-    const classes = useStyles();
     const [color, setColor] = useState('transparent')
-    const [open, setOpen] = useState(false);
     const [wishCount, setWishCount] = useState(0)
+
     useEffect(() => {
         var parsedArray = JSON.parse(localStorage.getItem('wishlist'))
         if (parsedArray == null) {
@@ -45,7 +18,7 @@ const Navbar = () => {
         else {
             setWishCount(prev => prev = parsedArray.length)
         }
-        console.log('cane')
+
     })
     function filterCount() {
         var parsedArray = JSON.parse(localStorage.getItem('wishlist'))
@@ -55,21 +28,12 @@ const Navbar = () => {
         else {
             setWishCount(prev => prev = parsedArray.length)
         }
-        console.log('cane')
     }
     useEffect(() => {
         window.addEventListener('storage', filterCount)
     })
 
 
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
 
 
     const HandleClickResponsive = () => {
@@ -173,7 +137,8 @@ const Navbar = () => {
                 <div className="__buttons" id="buttons-responsive">
                     <ul>
                         <li>
-                            <i className="far fa-user fa-lg"></i>
+                            {/* <i onClick={onOpenModal} className="far fa-user fa-lg"></i> */}
+                            <LoginModal />
                         </li>
                         <li>
                             <Link style={{ color: 'unset' }} to="/wishlist">
@@ -201,12 +166,14 @@ const Navbar = () => {
                     <form className="d-flex align-items-center">
                         <SearchInput />
                         <div className="__buttons" id="buttons">
+
                             <ul>
                                 <li>
-                                    <i className="far fa-user fa-lg"></i>
+                                    <LoginModal />
+                                    {/* <i onClick={onOpenModal} className="far fa-user fa-lg"></i> */}
                                 </li>
                                 <li>
-                                    <Link to="/wishlist" style={{color:'unset'}}>
+                                    <Link to="/wishlist" style={{ color: 'unset' }}>
                                         <i className="far fa-heart fa-lg">
                                             <span className="__badge-cart position-absolute translate-middle badge">
                                                 {wishCount}

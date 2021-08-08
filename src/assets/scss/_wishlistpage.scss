@@ -3,6 +3,9 @@
 
 
 .__section-list{
+    .container{
+        padding: 5rem 0 !important;
+    }
     .isempty{
         margin: 0;
         position: absolute;
@@ -12,14 +15,20 @@
         transform: translate(-50%, -50%);
     }
     position: relative;
-    @include boxShadow;
-    height: 600px;
-    overflow-y: scroll;
-    padding: 5rem 0;
+    & .__list{
+        margin: unset !important;
+        @include boxShadow;
+        height: 600px;
+        overflow-y: scroll;
+    }
+    
+    
+    & .container{
+        padding: 5rem 0;
+    }
 }
 .__wishlist-page{
     & .container{
-        padding: 5rem 0;
         & .__text-holder{
             margin: 5rem 0;
             & h1{
@@ -45,7 +54,7 @@
                 display: none;
             }
         }
-        padding: 5rem 0;
+        padding: 0 1rem;
         & .__product{
             border-bottom: 1px solid lightgray;
             justify-content: space-between;
@@ -78,6 +87,7 @@
             }
 
             & .__right{
+                margin: 1rem 0;
                 & .__btn{
                     display: inline-block;
                     margin: 0 1rem;

@@ -6,20 +6,22 @@ import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
 
 const BasketButton = () => {
+    
     const [open, setOpen] = useState(false)
     const {
         items,
         isEmpty,
-        totalUniqueItems,
         totalItems,
+        totalUniqueItems,
         cartTotal,
         updateItemQuantity,
         removeItem,
         emptyCart
 
     } = useCart()
-  
 
+    
+    
     if (isEmpty) return (
         <>
             <i onClick={() => setOpen(true)} type="button" className="fas fa-shopping-bag fa-lg">

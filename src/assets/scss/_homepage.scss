@@ -222,7 +222,8 @@
                 & .col-xl-3 {
                     
                     & .__bottom{
-                        padding: 0 1rem;
+                        height: max-content;
+                        padding: 1rem;
                         & li{
                             margin: 0 0.5rem;
                         }
@@ -234,7 +235,6 @@
                         @include transition;
                         width: 100%;
                         background-color: white;
-                        height: 40px;
                         visibility: hidden;
                         opacity: 0;
                     }
