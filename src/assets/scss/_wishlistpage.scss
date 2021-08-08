@@ -1,0 +1,134 @@
+@import './mixins.scss';
+@import './colors.scss';
+
+
+.__section-list{
+    .isempty{
+        margin: 0;
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    position: relative;
+    @include boxShadow;
+    height: 600px;
+    overflow-y: scroll;
+    padding: 5rem 0;
+}
+.__wishlist-page{
+    & .container{
+        padding: 5rem 0;
+        & .__text-holder{
+            margin: 5rem 0;
+            & h1{
+                margin-bottom: 2rem;
+                font-weight: bold;
+            }
+        }
+        .close-button-up{
+            display: none;
+        }
+        .text-responsive{
+            display: none;
+        }
+        @media screen and (max-width:768px) {
+            .text-responsive{
+                display: block;
+            }
+            .close-button-up{
+                display: flex;
+                justify-content: flex-end;
+            }
+            .close-button-bottom{
+                display: none;
+            }
+        }
+        padding: 5rem 0;
+        & .__product{
+            border-bottom: 1px solid lightgray;
+            justify-content: space-between;
+            padding: 1rem 0;
+            & .__left{
+                display: flex;
+                & .__description{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    padding: 0 0 0 1rem;
+                    & h5, p{
+                        margin: unset;
+                    }
+                }
+                & img{
+                    width: 150px;
+                }
+            }
+            & .responsive-left{
+                height: 100%;
+                justify-content: space-around;
+                display: none;
+            }
+            & .responsive-right{
+                display: none;
+                & > h4{
+                    margin: 1rem 0 !important;
+                }
+            }
+
+            & .__right{
+                & .__btn{
+                    display: inline-block;
+                    margin: 0 1rem;
+                    border: 1px solid black;
+                    padding: 0.5rem;                }
+                @media screen and (max-width:768px) {
+                   & .__btn{
+                       margin: unset;
+                   }
+                    .desktop{
+                        display: none !important;
+                    }
+                    & .responsive-right{
+                        display: block;
+                    }
+                    & .responsive-left{
+                        display: block;
+                    }
+                    & .__counter{
+                        justify-content: flex-end !important;
+                    }
+                    & .responsive-right{
+                        text-align: end;
+                    }
+                    & .responsive-left{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                }
+                display: flex;
+                justify-content: flex-end;
+                & h4{
+                    justify-content: space-between;
+                    margin:unset;
+                    margin-right: 1rem;
+                }
+                display: flex;
+                align-items: center;
+                & .__counter{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    & .__number{
+                        margin: 0 1rem;
+                        padding: 0.2rem 2rem;
+                        border: 1px solid black;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

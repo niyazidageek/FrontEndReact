@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -18,6 +18,7 @@ const BasketButton = () => {
         emptyCart
 
     } = useCart()
+  
 
     if (isEmpty) return (
         <>

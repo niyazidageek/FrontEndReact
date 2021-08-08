@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MenuButtonDesktop from './MenuButtonDesktop';
 import { useCart } from 'react-use-cart';
 import Modal from '@material-ui/core/Modal';
@@ -7,7 +7,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
 import BasketButton from './BasketButton';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Navbar = ({wishcount}) => {
+const Navbar = () => {
 
     const {
         items,
@@ -37,6 +36,32 @@ const Navbar = ({wishcount}) => {
     const classes = useStyles();
     const [color, setColor] = useState('transparent')
     const [open, setOpen] = useState(false);
+    const [wishCount, setWishCount] = useState(0)
+    useEffect(() => {
+        var parsedArray = JSON.parse(localStorage.getItem('wishlist'))
+        if (parsedArray == null) {
+            setWishCount(prev => prev = 0)
+        }
+        else {
+            setWishCount(prev => prev = parsedArray.length)
+        }
+        console.log('cane')
+    })
+    function filterCount() {
+        var parsedArray = JSON.parse(localStorage.getItem('wishlist'))
+        if (parsedArray == null) {
+            setWishCount(prev => prev = 0)
+        }
+        else {
+            setWishCount(prev => prev = parsedArray.length)
+        }
+        console.log('cane')
+    }
+    useEffect(() => {
+        window.addEventListener('storage', filterCount)
+    })
+
+
 
     const handleOpen = () => {
         setOpen(true);
@@ -151,14 +176,16 @@ const Navbar = ({wishcount}) => {
                             <i className="far fa-user fa-lg"></i>
                         </li>
                         <li>
-                            <i className="far fa-heart fa-lg">
-                                <span className="__badge-cart position-absolute translate-middle badge">
-                                    {wishcount}
-                                </span>
-                            </i>
+                            <Link style={{ color: 'unset' }} to="/wishlist">
+                                <i className="far fa-heart fa-lg">
+                                    <span className="__badge-cart position-absolute translate-middle badge">
+                                        {wishCount}
+                                    </span>
+                                </i>
+                            </Link>
                         </li>
                         <li>
-                        <BasketButton/>
+                            <BasketButton />
                         </li>
                     </ul>
                 </div>
@@ -179,21 +206,23 @@ const Navbar = ({wishcount}) => {
                                     <i className="far fa-user fa-lg"></i>
                                 </li>
                                 <li>
-                                    <i className="far fa-heart fa-lg">
-                                        <span className="__badge-cart position-absolute translate-middle badge">
-                                            {wishcount}
-                                        </span>
-                                    </i>
+                                    <Link to="/wishlist" style={{color:'unset'}}>
+                                        <i className="far fa-heart fa-lg">
+                                            <span className="__badge-cart position-absolute translate-middle badge">
+                                                {wishCount}
+                                            </span>
+                                        </i>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <BasketButton/>
-                                    
+                                    <BasketButton />
+
                                 </li>
                             </ul>
                         </div>
                         <MenuButtonDesktop />
 
-                        
+
                     </form>
                 </div>
             </div>

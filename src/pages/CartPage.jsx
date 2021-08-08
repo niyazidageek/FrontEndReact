@@ -8,6 +8,7 @@ const CartPage = () => {
     const [tax, setTax] = useState(0)
     const [word, setWord] = useState('')
     const [emptyWord, setEmptyWord] = useState('')
+    const [className, setClassName] =  useState('')
     const {
         items,
         isEmpty,
@@ -24,10 +25,12 @@ const CartPage = () => {
         if(totalUniqueItems>=1){
             setTax(prev=>prev = 10)
             setEmptyWord(prev=>prev='')
+            setClassName(prev=>prev='')
         }
         else{
             setTax(prev=>prev = 0)
             setEmptyWord(prev=>prev='Your cart is empty')
+            setClassName(prev=>prev='fas fa-shopping-cart')
         }
     })
     useEffect(() => {
@@ -53,7 +56,7 @@ const CartPage = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-8 col-12 __products">
-                                    <h1 id="isempty">{emptyWord}<i class="fas fa-shopping-cart"></i></h1>
+                                    <h1 className="isempty">{emptyWord}<i className="isempty" class={className}></i></h1>
                                     {
                                         items.map((item, index) => {
                                             const { name, img, price, id, quantity } = item

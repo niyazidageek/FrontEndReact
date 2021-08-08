@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Header from '../components/Header';
 import Carousel from 'react-elastic-carousel';
 import Footer from '../components/Footer';
@@ -68,21 +68,10 @@ const HomePage = () => {
     const {addItem} = useCart()
     const time = new Date();
     time.setHours(337)
-    const [wishCount, setWishCount] = useState(0)
-    useEffect(()=>{
-        var parsedArray = JSON.parse(localStorage.getItem('wishlist'))
-        if(parsedArray==null){
-            setWishCount(prev=>prev=0)
-        }
-        else{
-            setWishCount(prev=>prev=parsedArray.length)
-        }
-        console.log(wishCount)
-    },[clicked])
 
     return (
         <>
-            <Header wishcount={wishCount}/>
+            <Header />
             <div className="container __homepage">
                 <Carousel className="__carousel" style={{ paddingTop: '4rem' }} breakPoints={BreakPoints}>
                     <div className="row">
