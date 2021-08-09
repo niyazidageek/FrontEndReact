@@ -8,6 +8,7 @@
 @import './cartpage.scss';
 @import './wishlistpage.scss';
 @import './loginmodal.scss';
+@import './previewmodal.scss';
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -36,3 +37,23 @@
     }
     
 }
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: top;
+  animation-fill-mode: forwards; 
+  transform: scale(0.9, 0.7) translateY(-20px);
+  transition: all 80ms ease;
+  
+}
+.show {
+  transform: scale(1, 1) translateY(0);  
+  opacity: 1;
+  visibility: visible;
+}
+
+.rec-arrow{
+  display: none;
+}
+

@@ -115,6 +115,7 @@ const Footer = () => {
                             <div className="col-12 __collapse-btn" data-bs-toggle="collapse" href="#shop" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 <span>Shop</span>
                                 <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus -minus"></i>
                             </div>
                             <div className="collapse" id="shop">
                                 <div className="card card-body">
@@ -135,6 +136,7 @@ const Footer = () => {
                             <div className="col-12 __collapse-btn" data-bs-toggle="collapse" href="#company" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 <span>Company</span>
                                 <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus -minus"></i>
                             </div>
                             <div className="collapse" id="company">
                                 <div className="card card-body">
@@ -155,6 +157,7 @@ const Footer = () => {
                             <div className="col-12 __collapse-btn" data-bs-toggle="collapse" href="#account" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 <span>Your account</span>
                                 <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus -minus"></i>
                             </div>
                             <div className="collapse" id="account">
                                 <div className="card card-body">

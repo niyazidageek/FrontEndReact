@@ -73,4 +73,42 @@ footer{
             
         }
     }
+    
 }
+
+@keyframes footerAnimClose {
+    75%{
+        opacity: 0;
+    }
+    100%{
+        display: none;
+    }
+}
+
+@keyframes footerAnimOpen {
+    from{
+        display: block;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.-minus{
+   display: none;
+}
+.__collapse-btn[aria-expanded="true"] {     
+    & .fa-plus{
+        animation: footerAnimClose 500ms linear forwards;
+        display: none;
+    }
+    & .-minus{
+        animation: footerAnimOpen 500ms linear forwards;
+        display: block;
+        
+    }
+    
+    }
+    .collapsed i { 
+    transition: 0.7s linear !important;
+    }

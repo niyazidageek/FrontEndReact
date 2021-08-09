@@ -1,0 +1,43 @@
+@import './colors.scss';
+@import './mixins.scss';
+
+.__preview{
+    display: flex;
+    @media screen and (max-width:550px) {
+        flex-direction: column;
+        & img{
+            width: 100% !important;
+            margin-top: 1rem;
+        }
+    }
+    & img{
+        height: 200px;
+        object-fit: cover;
+    }
+    & .__description{
+        position: relative;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        & h4{
+            margin: 1rem 0;
+        }
+        & h1{
+            display: inline-block;
+        }
+        & h3{
+            display: inline-block;
+        }
+        & p{
+            display: inline-block;
+        }
+        & select{
+            height: 45px;
+            width: 50%;
+        }
+        & .__menu{
+            bottom: 0;
+            position: absolute;
+        }
+    }
+}

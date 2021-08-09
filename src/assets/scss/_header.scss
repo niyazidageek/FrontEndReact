@@ -4,12 +4,71 @@
 .__basket-menu{
     width: 500px;
 }
+.navbar-collapse{
+    padding: unset !important;
+}
 @media screen and (max-width:768px) {
     .__basket-menu{
         width: 100vw !important;
     }
 }
+
 header{
+    & .dropdown{
+        @media screen and(max-width:992px) {
+            .flex{
+                display: flex;
+                justify-content: center;
+            }
+            .row{
+                flex-direction: column;
+                & img{
+                    display: none;
+                }
+            }
+        }
+        .row{
+          width: max-content;
+        }
+        .container{
+            padding: 1rem !important;
+            .col-2{
+                width: max-content;
+                & i{
+                    margin:1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .col-3{
+                width: max-content;
+                & img{
+                    object-fit: cover;
+                    width: 200px;
+                }
+                @media screen and (max-width:1220px) {
+                    & img{
+                        display: none;
+                    }
+                }
+            }
+            .col-4{
+                width: max-content;
+            }
+            
+            & img{
+                object-fit: cover;
+                width: 350px;
+            }
+            ul{
+                overflow: hidden;
+                li{
+                    margin: 0.5rem 0;
+                }
+                flex-direction: column;
+            }
+        }
+    }
     position: relative;
     & .__top{
         padding: 0.5rem 1rem;
@@ -52,6 +111,11 @@ header{
         }
         
         & .__right{
+
+           & .dropdown-menu{
+               right: 50%;
+           }
+            
             ul{
                 li:first-child{
                     border-right: 1px solid lightgray;
@@ -124,7 +188,18 @@ header{
     & .__menu-btn{
         @include transition;
     }
+    
+    
 }
+
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg); 
+    }
+    .dropdown-toggle:after { 
+    transition: 0.7s; 
+    }
 .rec-arrow{
     display: none;
 }
+
+

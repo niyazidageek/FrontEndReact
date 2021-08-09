@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from '../components/Header';
 import Carousel from 'react-elastic-carousel';
 import Footer from '../components/Footer';
 import { useTimer } from 'react-timer-hook';
 import products from '../mocks/products';
 import { useCart } from 'react-use-cart';
-
-
+import PreviewModal from '../components/PreviewModal';
+import Aos from 'aos';
 
 const BreakPoints = [
     { width: 1, itemsToShow: 1 }
@@ -63,6 +63,11 @@ const HomePage = () => {
     const {addItem} = useCart()
     const time = new Date();
     time.setHours(337)
+    useEffect(()=>{
+        Aos.init({
+            duration : 1000
+          });
+    },[])
 
     return (
         <>
@@ -210,14 +215,14 @@ const HomePage = () => {
                                     const { img, name, price } = item
                                     
                                     return (
-                                        <div className="col-xl-3 col-md-4 col-6" key={index}>
+                                        <div className="col-xl-3 col-md-4 col-6" data-aos="zoom-in-up" key={index}>
                                             <div className="__img-container">
                                                 <img src={img} alt="" />
                                                 <div className="__bottom">
                                                     <span onClick={()=>addItem(item)}>Add to cart</span>
                                                     <ul>
                                                         <li onClick={()=>addToWishlist(item)}><i class="far fa-heart"></i></li>
-                                                        <li><i class="fas fa-expand-arrows-alt"></i></li>
+                                                        <li><PreviewModal img={img} name={name} price={price}/></li>
                                                     </ul>
                                                 </div>
                                             </div> 
