@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -78,36 +79,36 @@ const Footer = () => {
 
                         <div className="__footer-li col-md-2">
                             <ul>
-                                <li>Shop</li>
-                                <li>For women</li>
-                                <li>For Men</li>
-                                <li>Stores</li>
-                                <li>Our Blog</li>
-                                <li>Shop</li>
+                                <li><h5>Shop</h5></li>
+                                <li><Link to="/" className="dropdown-item">For women</Link></li>
+                                <li><Link to="/" className="dropdown-item">For Men</Link></li>
+                                <li><Link to="/contact" className="dropdown-item">Stores</Link></li>
+                                <li><Link to="/blog" className="dropdown-item">Our Blog</Link></li>
+                                <li><Link to="/" className="dropdown-item">Shop</Link></li>
                             </ul>
                         </div>
 
 
                         <div className="__footer-li col-md-2">
                             <ul>
-                                <li>Company</li>
-                                <li>Login</li>
-                                <li>Register</li>
-                                <li>Wishlist</li>
-                                <li>Our Products</li>
-                                <li>Checkouts</li>
+                                <li><h5>Company</h5></li>
+                                <li><Link to="/" className="dropdown-item">Login</Link></li>
+                                <li><Link to="/" className="dropdown-item">Register</Link></li>
+                                <li><Link to="/wishlist" className="dropdown-item">Wishlist</Link></li>
+                                <li><Link to="/" className="dropdown-item">Our Products</Link></li>
+                                <li><Link to="/cart" className="dropdown-item">Checkouts</Link></li>
                             </ul>
                         </div>
 
 
                         <div className="__footer-li col-md-2">
                             <ul>
-                                <li>Your account</li>
-                                <li>Login</li>
-                                <li>Register</li>
-                                <li>Wishlist</li>
-                                <li>Our Products</li>
-                                <li>Checkouts</li>
+                                <li><h5>Your account</h5></li>
+                                <li><Link to="/" className="dropdown-item">Login</Link></li>
+                                <li><Link to="/" className="dropdown-item">Register</Link></li>
+                                <li><Link to="/wishlist" className="dropdown-item">Wishlist</Link></li>
+                                <li><Link to="/" className="dropdown-item">Our Products</Link></li>
+                                <li><Link to="/cart" className="dropdown-item">Checkouts</Link></li>
                             </ul>
                         </div>
 
@@ -120,12 +121,12 @@ const Footer = () => {
                             <div className="collapse" id="shop">
                                 <div className="card card-body">
                                     <div className="__footer-li--resp col-md-2">
-                                        <ul>    
-                                            <li>For women</li>
-                                            <li>For Men</li>
-                                            <li>Stores</li>
-                                            <li>Our Blog</li>
-                                            <li>Shop</li>
+                                        <ul>
+                                            <li><Link to="/" className="dropdown-item">For women</Link></li>
+                                            <li><Link to="/" className="dropdown-item">For Men</Link></li>
+                                            <li><Link to="/contact" className="dropdown-item">Stores</Link></li>
+                                            <li><Link to="blog/" className="dropdown-item">Our Blog</Link></li>
+                                            <li><Link to="/" className="dropdown-item">Shop</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -142,11 +143,11 @@ const Footer = () => {
                                 <div className="card card-body">
                                     <div className="__footer-li--resp col-md-2">
                                         <ul>
-                                            <li>Login</li>
-                                            <li>Register</li>
-                                            <li>Wishlist</li>
-                                            <li>Our Products</li>
-                                            <li>Checkouts</li>
+                                            <li><Link to="/" className="dropdown-item">Login</Link></li>
+                                            <li><Link to="/" className="dropdown-item">Register</Link></li>
+                                            <li><Link to="/wishlist" className="dropdown-item">Wishlist</Link></li>
+                                            <li><Link to="/" className="dropdown-item">Our Products</Link></li>
+                                            <li><Link to="/cart" className="dropdown-item">Checkouts</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -163,11 +164,11 @@ const Footer = () => {
                                 <div className="card card-body">
                                     <div className="__footer-li--resp col-md-2">
                                         <ul>
-                                            <li>Login</li>
-                                            <li>Register</li>
-                                            <li>Wishlist</li>
-                                            <li>Our Products</li>
-                                            <li>Checkouts</li>
+                                            <li><Link to="/" className="dropdown-item">Login</Link></li>
+                                            <li><Link to="/" className="dropdown-item">Register</Link></li>
+                                            <li><Link to="/wishlist" className="dropdown-item">Wishlist</Link></li>
+                                            <li><Link to="/" className="dropdown-item">Our Products</Link></li>
+                                            <li><Link to="/cart" className="dropdown-item">Checkouts</Link></li>
                                         </ul>
                                     </div>
                                 </div>

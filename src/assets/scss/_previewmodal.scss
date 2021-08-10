@@ -9,6 +9,18 @@
             width: 100% !important;
             margin-top: 1rem;
         }
+        & .__buttons{
+            flex-direction: column;
+            width: 100% !important;
+            height: 100px;
+            & .__btn{
+                width: 100% !important;
+                text-align: center;
+            }
+        }
+        & .__description{
+            padding-left: unset !important;
+        }
     }
     & img{
         height: 200px;
@@ -35,9 +47,29 @@
             height: 45px;
             width: 50%;
         }
-        & .__menu{
-            bottom: 0;
-            position: absolute;
+    }
+    .__buttons{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        .__btn{
+            display: inline-block;
+            border: 1px solid $beige;
+            padding: 0.5rem 1rem;
+            width: max-content;
+            @include transition;
+            & h5{
+                color: $beige;
+                display: inline-block;
+                margin: unset;
+            }
         }
+        // .__btn:hover{
+        //     border: 1px solid black;
+        //     & h5{
+        //         color: black;
+        //     }
+        //     background-color: $beige;
+        // }
     }
 }

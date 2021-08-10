@@ -1,6 +1,30 @@
 @import "./mixins.scss";
 @import "./colors";
 
+.jLgnwX{
+    border: none !important;
+    border-radius: unset !important;
+    width: 30px !important;
+    height: 5px !important;
+}
+.jLgnwX:hover, .jLgnwX:focus{
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: unset !important;
+    width: 30px !important;
+    height: 5px !important;
+}
+.ejXxNI{
+    border-radius: unset !important;
+    background-color: gray !important;
+    box-shadow: unset !important;
+    width: 30px !important;
+    height: 5px !important;
+}
+
+.dropdown-item{
+    padding: 0.25rem !important;
+}
 .__basket-menu{
     width: 500px;
 }

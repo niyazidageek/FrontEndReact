@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carousel from 'react-elastic-carousel'
+import people from '../mocks/people';
+import logos from '../mocks/logos';
 
 const BreakPoints = [
     { width: 1, itemsToShow: 5 }
 ]
 
 const ItemsToScroll = {
-    number:1
+    number: 1
 }
 
 const AboutPage = () => {
@@ -148,78 +150,22 @@ const AboutPage = () => {
                     </div>
 
                     <div className="row">
-                    <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="__content">
-                            <div className="__img-container">
-                                <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/avatar/avatar-7.jpg" alt="" />
-                            </div>
-                            <h5>Frankie Kafka</h5>
-                            <span>CEO & Founder</span>
-                            </div>
-                        </div>
+                        {
+                            people.map((element, index) => {
+                                const { id, name, position, img } = element;
+                                return (
+                                    <div className="col-md-3 col-6" key={index}>
+                                        <div className="__content">
+                                            <div className="__img-container">
+                                                <img src={img} alt="" />
+                                            </div>
+                                            <h5>{name}</h5>
+                                            <span>{position}</span>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
 
                 </div>
@@ -228,21 +174,14 @@ const AboutPage = () => {
             <div className="__section-carousel">
                 <div className="container">
                     <Carousel breakPoints={BreakPoints} enableAutoPlay={true} enableMouseSwipe={true}>
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-1.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-2.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-3.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-4.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-5.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-1.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-2.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-3.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-4.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-5.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-1.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-2.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-3.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-4.svg" alt="" />
-                        <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/brand/brand-5.svg" alt="" />
+                        {
+                            logos.map((element, index) => {
+                                const { id, img } = element;
+                                return (
+                                    <img key={index} src={img} alt="" />
+                                )
+                            })
+                        }
                     </Carousel>
                 </div>
             </div>
@@ -252,7 +191,7 @@ const AboutPage = () => {
                     <div className="row">
                         <div className="col-12">
                             <h1>
-                            At Varkala, we want the right choice to be as easy as putting on a great T-shirt
+                                At Varkala, we want the right choice to be as easy as putting on a great T-shirt
                             </h1>
                         </div>
                         <div className="col-lg-6 col-12">
@@ -264,7 +203,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

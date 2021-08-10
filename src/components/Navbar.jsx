@@ -78,22 +78,22 @@ const Navbar = () => {
                         <div className="row">
                             <div className="col-4">
                                 <ul>
-                                    <li>Shop pages</li>
-                                    <li>Full width</li>
-                                    <li>Full width with category menu</li>
-                                    <li>Full width with big products</li>
-                                    <li>Fixed width</li>
-                                    <li>Fixed width  & sidebar</li>
-                                    <li>Fixed width & mansory layout</li>
-                                    <li>subcategories</li>
+                                    <li><Link to="/" className="dropdown-item">Shop pages</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Full width</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Full width with category menu</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Full width with big products</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Fixed width</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Fixed width  & sidebar</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Fixed width & mansory layout</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Subcategories</Link></li>
                                 </ul>
                             </div>
                             <div className="col-4">
                                 <ul>
-                                    <li>Product pages</li>
-                                    <li>Product with sticky info</li>
-                                    <li>Product with background</li>
-                                    <li>Product standart</li>
+                                    <li><Link to="/"className="dropdown-item">Product pages</Link></li>
+                                    <li><Link to="/"className="dropdown-item">Product with sticky info</Link></li>
+                                    <li><Link to="/"className="dropdown-item">Product with background</Link></li>
+                                    <li><Link to="/"className="dropdown-item">Product standart</Link></li>
                                 </ul>
                             </div>
                             <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/kyle-loftus-596319-unsplash-cropped.jpg" alt="" />
@@ -182,58 +182,58 @@ const Navbar = () => {
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/christopher-campbell-28571-unsplash.jpg" alt="" />
                                 <ul>
                                     <li><h5>Homepage</h5></li>
-                                    <li>Home-1 Fashion</li>
-                                    <li>Home-1 Fashion</li>
-                                    <li>Home-1 Fashion</li>
+                                    <li><Link to="/" className="dropdown-item">Home 1 - Fashion</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Home 1 - Fashion</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Home 1 - Fashion</Link></li>
                                 </ul>
                                 <ul>
                                     <li><h5>Category</h5></li>
-                                    <li>Full width</li>
-                                    <li>Full width</li>
-                                    <li>Full width</li>
-                                    <li>Full width</li>
-                                    <li>Full width</li>
+                                    <li><Link to="/" className="dropdown-item">Full width</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Full width</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Full width</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Full width</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Full width</Link></li>
                                 </ul>
                             </div>
                             <div className="col-3">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/ian-dooley-347962-unsplash.jpg" alt="" />
                                 <ul>
                                     <li><h5>Category</h5></li>
-                                    <li>Shopping cart</li>
-                                    <li>Checkout</li>
-                                    <li>Wishlist</li>
+                                    <li><Link to="/cart" className="dropdown-item">Shopping cart</Link></li>
+                                    <li><Link to="/cart" className="dropdown-item">Checkout</Link></li>
+                                    <li><Link to="/wishlist" className="dropdown-item">Wishlist</Link></li>
                                 </ul>
                                 <ul>
                                     <li><h5>Product</h5></li>
-                                    <li>Product with sticky info</li>
-                                    <li>Product standart</li>
+                                    <li><Link to="/" className="dropdown-item">Product with sticky info</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Product standart</Link></li>
                                 </ul>
                             </div>
                             <div className="col-3">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/ian-dooley-347942-unsplash.jpg" alt="" />
                                 <ul>
                                     <li><h5>Blog</h5></li>
-                                    <li>Blog</li>
-                                    <li>Blog-mansory</li>
-                                    <li>Post</li>
+                                    <li><Link to="/blog" className="dropdown-item">Blog</Link></li>
+                                    <li><Link to="/blog" className="dropdown-item">Blog-mansory</Link></li>
+                                    <li><Link to="/blog" className="dropdown-item">Post</Link></li>
                                 </ul>
                                 <ul>
                                     <li><h5>Pages</h5></li>
-                                    <li>About-Company</li>
-                                    <li>F.A.Q</li>
-                                    <li>Contact</li>
-                                    <li>Privacy policy</li>
+                                    <li><Link to="/about" className="dropdown-item">About-Company</Link></li>
+                                    <li><Link to="/" className="dropdown-item">F.A.Q</Link></li>
+                                    <li><Link to="/contact" className="dropdown-item">Contact</Link></li>
+                                    <li><Link to="/" className="dropdown-item">Privacy policy</Link></li>
                                 </ul>
                             </div>
                             <div className="col-3">
                                 <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/photo-1534126511673-b6899657816a.jpg" alt="" />
                                 <ul>
                                     <li><h5>Customer</h5></li>
-                                    <li>Login</li>
-                                    <li>Orders</li>
-                                    <li>Order tracing</li>
-                                    <li>Adresses</li>
-                                    <li>Wishlist</li>
+                                    <li><Link to="/" className="dropdown-item">Login</Link></li>
+                                    <li><Link to="/cart" className="dropdown-item">Orders</Link></li>
+                                    <li><Link to="/cart" className="dropdown-item">Order tracing</Link></li>
+                                    <li><Link to="/contact" className="dropdown-item">Adresses</Link></li>
+                                    <li><Link to="/wishlist" className="dropdown-item">Wishlist</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -272,7 +272,6 @@ const Navbar = () => {
                 <div className="__buttons" id="buttons-responsive">
                     <ul>
                         <li>
-                            {/* <i onClick={onOpenModal} className="far fa-user fa-lg"></i> */}
                             <LoginModal />
                         </li>
                         <li>

@@ -73,7 +73,7 @@ const HomePage = () => {
         <>
             <Header />
             <div className="container __homepage">
-                <Carousel className="__carousel" style={{ paddingTop: '4rem' }} breakPoints={BreakPoints}>
+                <Carousel className="__carousel" style={{ paddingTop: '4rem' }} breakPoints={BreakPoints} enableAutoPlay={true}>
                     <div className="row">
                         <div className="col-8 col-md-6">
                             <span>TIME IS ALMOST UP</span>

@@ -159,7 +159,7 @@
             }
             & .row{
                 
-                & .col-md-3, .col-6{
+                &  .col-6{
                     margin-bottom: 5rem;
                     display: flex;
                     justify-content: center;
@@ -168,7 +168,8 @@
                         & .__img-container{
                             overflow: hidden;
                             & img{
-                                width: 100%;
+                                width: 230px;
+                                height: 230px;
                             }
                             display: inline-block;
                             border-radius: 50%;
