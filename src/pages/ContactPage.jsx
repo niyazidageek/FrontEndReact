@@ -101,9 +101,9 @@ const ContactPage = () => {
                     <div className="row">
                         <div className="col-lg-6 col-12">
                             <h1>Get in touch </h1>
-                            <i type='button' class="fab fa-facebook-f fa-2x"></i>
-                            <i type='button' class="fab fa-twitter fa-2x"></i>
-                            <i type='button' class="fab fa-instagram fa-2x"></i>
+                            <i  class="fab fa-facebook-f fa-2x"></i>
+                            <i  class="fab fa-twitter fa-2x"></i>
+                            <i  class="fab fa-instagram fa-2x"></i>
                         </div>
                         <div className="col-lg-6 col-12">
                             <div className="row">
@@ -126,7 +126,7 @@ const ContactPage = () => {
                                 <div className="col-12">
                                     <h5>Your message for us *</h5>
                                     <textarea name="" id=""></textarea>
-                                    <div type='button' className="__message-btn">
+                                    <div  className="__message-btn">
                                         SEND MESSAGE
                                     </div>
                                 </div>

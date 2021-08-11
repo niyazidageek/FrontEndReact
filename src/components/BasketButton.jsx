@@ -50,7 +50,7 @@ const BasketButton = () => {
                                     <Link to="/cart" className="__btn" style={{textDecoration:'none', color:'unset'}}>
                                         <h4>VIEW CART</h4>
                                     </Link>
-                                    <div type="button" className="__btn">
+                                    <div  className="__btn">
                                         <h4>CHECKOUT</h4>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@ const BasketButton = () => {
                                     <Link to="/cart" className="__btn" style={{textDecoration:'none', color:'unset'}}>
                                         <h4>VIEW CART</h4>
                                     </Link>
-                                    <div className="__btn" type='button'>
+                                    <div className="__btn" >
                                         <h4>CHECKOUT</h4>
                                     </div>
                                 </div>

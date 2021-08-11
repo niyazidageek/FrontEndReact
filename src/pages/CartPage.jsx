@@ -67,7 +67,7 @@ const CartPage = () => {
                                                             <p>Color: Green</p>
                                                         </div>
                                                     </div>
-                                                    <i type="button" onClick={() => { removeItem(id) }} className="fas fa-times close-button-up col-2"></i>
+                                                    <i  onClick={() => { removeItem(id) }} className="fas fa-times close-button-up col-2"></i>
                                                     <div className="__right col-md-7 col-12">
                                                         <div className="col-6 responsive-left">
                                                             <span>Price per item</span>
@@ -76,25 +76,25 @@ const CartPage = () => {
                                                         </div>
                                                         <div className="col-6 responsive-right"><h4>${price}</h4>
                                                             <div className="__counter">
-                                                                <i type="button" onClick={() => updateItemQuantity(id, quantity + 1)} className="fas fa-plus"></i>
+                                                                <i  onClick={() => updateItemQuantity(id, quantity + 1)} className="fas fa-plus"></i>
                                                                 <div className="__number">
                                                                     <h4>{item.quantity}</h4>
                                                                 </div>
-                                                                <i type="button" onClick={() => updateItemQuantity(id, quantity - 1)} className="fas fa-minus"></i>
+                                                                <i  onClick={() => updateItemQuantity(id, quantity - 1)} className="fas fa-minus"></i>
                                                             </div>
                                                             <h4>${quantity * (Number(price))}</h4>
                                                             <i className="fas fa-times close-button-bottom"></i>
                                                         </div>
                                                         <h4 className="desktop">${price}</h4>
                                                         <div className="__counter desktop">
-                                                            <i type="button" onClick={() => updateItemQuantity(id, quantity + 1)} className="fas fa-plus desktop"></i>
+                                                            <i  onClick={() => updateItemQuantity(id, quantity + 1)} className="fas fa-plus desktop"></i>
                                                             <div className="__number desktop">
                                                                 <h4 className="desktop">{item.quantity}</h4>
                                                             </div>
-                                                            <i type="button" onClick={() => updateItemQuantity(id, quantity - 1)} className="fas fa-minus desktop"></i>
+                                                            <i  onClick={() => updateItemQuantity(id, quantity - 1)} className="fas fa-minus desktop"></i>
                                                         </div>
                                                         <h4 className="desktop">${quantity * (Number(price))}</h4>
-                                                        <i type="button" onClick={() => { removeItem(id) }} className="fas fa-times close-button-bottom"></i>
+                                                        <i  onClick={() => { removeItem(id) }} className="fas fa-times close-button-bottom"></i>
                                                     </div>
                                                 </div>
                                             )

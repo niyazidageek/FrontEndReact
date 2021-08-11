@@ -287,7 +287,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <i onClick={HandleClickResponsive} className=" __menu-btn fas fa-bars fa-2x" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style={{ alignSelf: 'end', color: "black" }}></i>
+                <i onClick={HandleClickResponsive} className=" __menu-btn fas fa-bars fa-2x"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style={{ alignSelf: 'end', color: "black" }}></i>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{ backgroundColor: `${color}`, zIndex: '10' }}>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <HomeDrop />

@@ -70,14 +70,14 @@ const PreviewModal = ({ img, name, price }) => {
 
     const LeftButton = () => {
         return (
-            <div type='button' onClick={()=>{handleLeftClick()}} className="__btn" style={leftBtn}>
+            <div  onClick={()=>{handleLeftClick()}} className="__btn" style={leftBtn}>
                 <h5 style={leftTxt}>HOODIE</h5>
             </div>
         )
     }
     const RightButton = () => {
         return (
-            <div type='button' onClick={()=>{handleRightClick()}} className="__btn" style={rightBtn}>
+            <div  onClick={()=>{handleRightClick()}} className="__btn" style={rightBtn}>
                 <h5 style={rightTxt}>COLLEGE</h5>
             </div>
         )
@@ -86,7 +86,7 @@ const PreviewModal = ({ img, name, price }) => {
    
     return (
         <>
-            <i onClick={onOpenModal} type='button' class="fas fa-expand-arrows-alt"></i>
+            <i onClick={onOpenModal}  class="fas fa-expand-arrows-alt"></i>
             <Modal
                 open={open}
                 onClose={onCloseModal}
@@ -104,9 +104,9 @@ const PreviewModal = ({ img, name, price }) => {
                         <p>Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
                         <h4>Size</h4>
                         <select>
-                            <option class="dropdown-item" type="button">SMALL</option>
-                            <option class="dropdown-item" type="button">MEDIUM</option>
-                            <option class="dropdown-item" type="button">LARGE</option>
+                            <option class="dropdown-item" >SMALL</option>
+                            <option class="dropdown-item" >MEDIUM</option>
+                            <option class="dropdown-item" >LARGE</option>
                         </select>
                         <h4>Type</h4>
                         <div className="__buttons">

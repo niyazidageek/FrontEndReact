@@ -23,7 +23,7 @@ const MenuButtonDesktop = () => {
 
     return (
         <div>
-            <i type="button" onClick={() => setOpen(true)} id="menubutton" className="__menu-btn fas fa-bars fa-2x" style={{ alignSelf: 'end' }}></i>
+            <i  onClick={() => setOpen(true)} id="menubutton" className="__menu-btn fas fa-bars fa-2x" style={{ alignSelf: 'end' }}></i>
             <SwipeableDrawer
                 open={open}
                 onClose={() => { setOpen(false) }}

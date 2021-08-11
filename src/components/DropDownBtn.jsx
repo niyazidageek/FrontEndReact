@@ -7,7 +7,7 @@ const DropDownBtn = ({ type, lang1, lang2, lang3, currency1, currency2 }) => {
     if (type == "language") {
         return (
             <div class="dropdown __dropdown">
-                <span class="btn dropdown-toggle __btn-drop" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="btn dropdown-toggle __btn-drop"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     {lang}
                 </span>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -21,7 +21,7 @@ const DropDownBtn = ({ type, lang1, lang2, lang3, currency1, currency2 }) => {
     else if (type == "currency") {
         return (
             <div class="dropdown __dropdown">
-                <span class="btn dropdown-toggle __btn-drop" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="btn dropdown-toggle __btn-drop"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     {currency}
                 </span>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">

@@ -87,7 +87,7 @@ const HomePage = () => {
                                     <div className="col-8 col-md-6">
                                         <span>{caption}</span>
                                         <h1>{name}</h1>
-                                        <div type='button' className="__btn">{btn}</div>
+                                        <div  className="__btn">{btn}</div>
                                     </div>
                                     <div className="col-8 col-md-6">
                                         <img src={img} alt="" />
@@ -175,11 +175,11 @@ const HomePage = () => {
                             <span className="text-decoration-line-through">$129.00</span>
                             <span>$79.00</span>
                             <div className="__discount">
-                                <span type='button'>$50 off</span>
+                                <span >$50 off</span>
                             </div>
                             <MyTimer expiryTimestamp={time} />
                             <div className="__shop-button">
-                                <span type='button'>SHOP NOW</span>
+                                <span >SHOP NOW</span>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -205,9 +205,9 @@ const HomePage = () => {
                                             <div className="__img-container">
                                                 <img src={img} alt="" />
                                                 <div className="__bottom">
-                                                    <span type='button' onClick={() => addItem(item)}>Add to cart</span>
+                                                    <span  onClick={() => addItem(item)}>Add to cart</span>
                                                     <ul>
-                                                        <li type='button' onClick={() => addToWishlist(item)}><i class="far fa-heart"></i></li>
+                                                        <li  onClick={() => addToWishlist(item)}><i class="far fa-heart"></i></li>
                                                         <li><PreviewModal img={img} name={name} price={price} /></li>
                                                     </ul>
                                                 </div>
@@ -229,7 +229,7 @@ const HomePage = () => {
                 <div className="container">
                     <h1>Summer Sales</h1>
                     <p>Our biggest sales this year — up to 60% off!</p>
-                    <div className="__shopping-btn" type='button'>
+                    <div className="__shopping-btn" >
                         <span>START SHOPPING</span>
                     </div>
                     <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair-transparent.png" alt="" />

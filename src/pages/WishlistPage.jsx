@@ -58,21 +58,21 @@ const WishlistPage = () => {
                                         <p>Color: Green</p>
                                     </div>
                                 </div>
-                                <i type="button" onClick={() => removeItem(id)} className="fas fa-times close-button-up col-2"></i>
+                                <i  onClick={() => removeItem(id)} className="fas fa-times close-button-up col-2"></i>
                                 <div className="__right col-md-7 col-12">
                                     <div className="col-6 responsive-left">
                                         <span>Price per item</span>
                                     </div>
                                     <div className="col-6 responsive-right">
-                                        <div type="button" onClick={() => addItem(item)} className="__btn">
+                                        <div  onClick={() => addItem(item)} className="__btn">
                                             ADD TO CART
                                         </div>
                                         <h4>${price}</h4>
-                                        <i type="button" onClick={() => removeItem(id)} className="fas fa-times close-button-bottom"></i>
+                                        <i  onClick={() => removeItem(id)} className="fas fa-times close-button-bottom"></i>
                                     </div>
                                     <h4 className="desktop">${price}</h4>
-                                    <div type="button" onClick={() => addItem(item)} className="__btn desktop">ADD TO CART</div>
-                                    <i type="button" onClick={() => removeItem(id)} className="fas fa-times close-button-bottom"></i>
+                                    <div  onClick={() => addItem(item)} className="__btn desktop">ADD TO CART</div>
+                                    <i  onClick={() => removeItem(id)} className="fas fa-times close-button-bottom"></i>
                                 </div>
                             </div>
                         )

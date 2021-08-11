@@ -57,8 +57,8 @@ const BlogPage = () => {
 
                         </div>
                         <div className="row d-flex justify-content-between">
-                            <span type='button'><ArrowBackIosIcon fontSize='small'/> Older posts</span>
-                            <span type='button'>Newer posts <ArrowForwardIosIcon fontSize='small'/></span>
+                            <span ><ArrowBackIosIcon fontSize='small'/> Older posts</span>
+                            <span >Newer posts <ArrowForwardIosIcon fontSize='small'/></span>
                         </div>
                     </div>
                 </div>
