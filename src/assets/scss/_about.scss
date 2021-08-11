@@ -198,7 +198,11 @@
             & img{
                 height: 100%;
                 margin: 0 1rem;
+                @media screen and (max-width:552px) {
+                    height: 32px;
+                }
             }
+            
         }
         background-color: $light-gray;
     }
