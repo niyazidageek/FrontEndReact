@@ -33,7 +33,7 @@ const LoginModal = () => {
                                 <label htmlFor="remember30">Remember me for 30 days</label>
                             </div>
                             <div className="__login">
-                                <div className="__btn" type="submit" id="login">
+                                <div className="__btn" id="login">
                                     <i class="fas fa-sign-in-alt"></i>
                                     <p>LOG IN</p>
                                 </div>
@@ -75,7 +75,7 @@ const LoginModal = () => {
                             <input type="password" placeholder="Password" />
                         </div>
                         <div className="__login">
-                            <div className="__btn" type="submit" id="login">
+                            <div className="__btn"  id="login">
                                 <i class="far fa-user"></i>
                                 <p>REGISTER</p>
                             </div>

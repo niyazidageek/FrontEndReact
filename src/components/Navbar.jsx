@@ -45,7 +45,7 @@ const Navbar = () => {
     const SearchInput = () => {
         const style = { border: 'unset', borderBottom: '1px solid black', boxShadow: 'unset', borderRadius: 'unset', marginRight: '2rem', backgroundColor: 'transparent' }
         return (
-            <input type="search" placeholder="Search" aria-label="Search" style={style} />
+            <input placeholder="Search" aria-label="Search" style={style} />
         )
     }
 
