@@ -1,5 +1,20 @@
 @import "./mixins.scss";
 @import "./colors";
+
+
+.MuiRating-readOnly{
+    visibility: hidden;
+    opacity: 0;
+    @include transition;
+}
+
+@media screen and (max-width:390px) {
+    .MuiRating-readOnly{
+        position: relative !important;
+    }
+}
+
+
 .__homepage{
     & .__carousel{
         & .col-md-6{
@@ -69,84 +84,7 @@
         }
         
     }
-
-
-
-    // & .__popular-this-week{
-    //     & .col-md-5{
-    //         @include transition;
-
-    //         & img{
-    //             height: 400px;
-    //         }
-    //         margin-bottom: 4rem;
-    //     }
-    //     & .col-md-5:hover{
-    //         transform: scale(1.1);
-    //     }
-    //     & .col-md-7{
-    //         display: flex;
-    //         justify-content: flex-end;
-    //         position: relative;
-    //         @include transition;
-    //         margin-bottom: 4rem;
-    //         &  img{
-    //             height: 550px;
-    //         }
-    //     }
-    //     & .col-md-7:hover{
-    //         transform: scale(1.1);
-    //         position: relative;
-    //         @include transition;
-    //     }
-    //     & .__description{
-    //         width: 200px;
-    //     }
-    //     & .__description--float{
-    //         width: 200px;
-    //         position: absolute;
-    //         left: 5% !important;
-    //         top:50%;
-    //         transform: translateY(-50%);
-    //     }
-    //     & .col-md-7.--right{
-    //         & img{
-    //             margin-left: 3rem;
-    //         }
-    //         .__description--float{
-    //             left: 0%;
-    //         }
-    //     }  
-    //     @media screen and (max-width:768px) {
-    //         & .col-md-7.--right{
-    //             & img{
-    //                 margin: 0;
-    //             }
-    //         }
-    //     }
-    //     @media screen and (max-width:1200px) {
-    //         & .col-md-7{
-    //             display: flex;
-    //             justify-content: center;
-    //             flex-direction: column;
-    //             &  img{
-    //                 height: 300px;
-    //             }
-    //         }
-    //         & .col-md-5{
-    //             & img{
-    //                 height: 300px;
-    //             }
-    //         }
-    //     }
-    // }
 }
-
-
-
-
-
-
 
 .__deal-of-week{
     background-color: $light-blue;
@@ -192,6 +130,11 @@
             border: 1px solid black;
             width: max-content;
             padding: 0.5rem;
+            @include transition;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
         }
         & img{
             height: 600px;
@@ -223,12 +166,31 @@
                     opacity: 1;
                 }
                 & .col-xl-3 {
-                    
+
+                    &:hover .MuiRating-readOnly{
+                        visibility: visible;
+                        opacity: 1;
+                    }
                     & .__bottom{
                         height: max-content;
                         padding: 1rem;
                         & li{
                             margin: 0 0.5rem;
+                            & i{
+                                @include transition;
+                            }
+                            &:hover{
+                                & i{
+                                    color: $beige !important;
+                                }
+                            }
+                        }
+                        & span{
+                            @include transition;
+                            &:hover{
+                                color: $beige;
+                                border-bottom: 1px solid $beige;
+                            }
                         }
                         align-items: center;
                         justify-content: space-between;
@@ -280,6 +242,11 @@
             width: max-content;
             align-self: center;
             padding: 1rem;
+            @include transition;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
         }
         & img{
             right: 0;

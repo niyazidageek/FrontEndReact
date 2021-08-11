@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Carousel from 'react-elastic-carousel';
 import Footer from '../components/Footer';
@@ -6,7 +6,9 @@ import { useTimer } from 'react-timer-hook';
 import products from '../mocks/products';
 import { useCart } from 'react-use-cart';
 import PreviewModal from '../components/PreviewModal';
+import carouselitems from '../mocks/carouselitems';
 import Aos from 'aos';
+import Rating from '@material-ui/lab/Rating';
 
 const BreakPoints = [
     { width: 1, itemsToShow: 1 }
@@ -46,70 +48,54 @@ function MyTimer({ expiryTimestamp }) {
 
 const HomePage = () => {
     const [clicked, setClicked] = useState(false)
-    function addToWishlist(item){
-        setClicked(prev=>prev=!prev)
+    function addToWishlist(item) {
+        setClicked(prev => prev = !prev)
         var parsedArray = JSON.parse(localStorage.getItem('wishlist')) || [];
-        if(parsedArray.some(element=>element.id==item.id)){
+        if (parsedArray.some(element => element.id == item.id)) {
             console.log('already')
-            var filteredArray = parsedArray.filter(element=>element.id !== item.id)
+            var filteredArray = parsedArray.filter(element => element.id !== item.id)
             console.log(filteredArray)
             localStorage.setItem('wishlist', JSON.stringify(filteredArray))
         }
-        else{
+        else {
             parsedArray.push(item);
             localStorage.setItem('wishlist', JSON.stringify(parsedArray));
         }
     }
-    const {addItem} = useCart()
+    const { addItem } = useCart()
     const time = new Date();
     time.setHours(337)
-    useEffect(()=>{
+    useEffect(() => {
         Aos.init({
-            duration : 1000
-          });
-    },[])
+            duration: 1000
+        });
+    }, [])
+    useEffect(()=>{
+        document.title='Home'
+    })
 
     return (
         <>
             <Header />
             <div className="container __homepage">
                 <Carousel className="__carousel" style={{ paddingTop: '4rem' }} breakPoints={BreakPoints} enableAutoPlay={true}>
-                    <div className="row">
-                        <div className="col-8 col-md-6">
-                            <span>TIME IS ALMOST UP</span>
-                            <h1>
-                                Design clocks on sale
-                            </h1>
-                            <div className="__btn">START SHOPPING</div>
-                        </div>
-                        <div className="col-8 col-md-6">
-                            <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock-transparent.png" alt="" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-8 col-md-6">
-                            <span>ALL OF OUR FAVOURITES</span>
-                            <h1>
-                                Black & White
-                            </h1>
-                            <div className="__btn">DISCOVER MORE</div>
-                        </div>
-                        <div className="col-8 col-md-6">
-                            <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair2-transparent.png" alt="" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-8 col-md-6">
-                            <span>OUR ALL-TIME FAVOURITES</span>
-                            <h1>
-                                Boxxez
-                            </h1>
-                            <div className="__btn">DISCOVER MORE</div>
-                        </div>
-                        <div className="col-8 col-md-6">
-                            <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box-transparent.png" alt="" />
-                        </div>
-                    </div>
+                    {
+                        carouselitems.map((element, index) => {
+                            const { id, name, caption, btn, img } = element
+                            return (
+                                <div className="row" key={index}>
+                                    <div className="col-8 col-md-6">
+                                        <span>{caption}</span>
+                                        <h1>{name}</h1>
+                                        <div type='button' className="__btn">{btn}</div>
+                                    </div>
+                                    <div className="col-8 col-md-6">
+                                        <img src={img} alt="" />
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </Carousel>
 
                 <div className="__popular-this-week">
@@ -189,11 +175,11 @@ const HomePage = () => {
                             <span className="text-decoration-line-through">$129.00</span>
                             <span>$79.00</span>
                             <div className="__discount">
-                                <span>$50 off</span>
+                                <span type='button'>$50 off</span>
                             </div>
                             <MyTimer expiryTimestamp={time} />
                             <div className="__shop-button">
-                                <span>SHOP NOW</span>
+                                <span type='button'>SHOP NOW</span>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -203,7 +189,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="__new-arrivals">
+            <div className="__new-arrivals container">
                 <div className="container">
                     <div className="__title">
                         <h2>New Arrivals</h2>
@@ -213,21 +199,22 @@ const HomePage = () => {
                             {
                                 products.map((item, index) => {
                                     const { img, name, price } = item
-                                    
+
                                     return (
-                                        <div className="col-xl-3 col-md-4 col-6" data-aos="zoom-in-up" key={index}>
+                                        <div className="col-xl-3 col-md-4 col-6 mb-4" data-aos="zoom-in-up" key={index}>
                                             <div className="__img-container">
                                                 <img src={img} alt="" />
                                                 <div className="__bottom">
-                                                    <span onClick={()=>addItem(item)}>Add to cart</span>
+                                                    <span type='button' onClick={() => addItem(item)}>Add to cart</span>
                                                     <ul>
-                                                        <li onClick={()=>addToWishlist(item)}><i class="far fa-heart"></i></li>
-                                                        <li><PreviewModal img={img} name={name} price={price}/></li>
+                                                        <li type='button' onClick={() => addToWishlist(item)}><i class="far fa-heart"></i></li>
+                                                        <li><PreviewModal img={img} name={name} price={price} /></li>
                                                     </ul>
                                                 </div>
-                                            </div> 
+                                            </div>
                                             <h5>{name}</h5>
                                             <span>${price}</span>
+                                            <Rating style={{position:'absolute', right:'0'}} name="read-only" value={4} readOnly />
                                         </div>
                                     )
                                 })
@@ -242,7 +229,7 @@ const HomePage = () => {
                 <div className="container">
                     <h1>Summer Sales</h1>
                     <p>Our biggest sales this year — up to 60% off!</p>
-                    <div className="__shopping-btn">
+                    <div className="__shopping-btn" type='button'>
                         <span>START SHOPPING</span>
                     </div>
                     <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair-transparent.png" alt="" />

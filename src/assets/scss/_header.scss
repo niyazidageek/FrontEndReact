@@ -137,7 +137,7 @@ header{
         & .__right{
 
            & .dropdown-menu{
-               right: 50%;
+             width: max-content !important;
            }
             
             ul{
@@ -204,6 +204,7 @@ header{
             border-radius: 50% !important;
             font-size: 0.6rem;
             background-color: $beige;
+            font-family: sans-serif;
         }
     }
     & .__menu-btn:hover{

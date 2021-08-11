@@ -6,7 +6,6 @@ import LoginModal from './LoginModal';
 
 const Navbar = () => {
 
-    const [clicked, setClicked] = useState(true)
     const [color, setColor] = useState('transparent')
     const [wishCount, setWishCount] = useState(0)
     const [storage, setStorage] = useState(false)
@@ -115,53 +114,53 @@ const Navbar = () => {
                         <div className="row">
                             <div className="col-2 d-flex flex-column align-items-center">
                                 <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <h5>T-shirt</h5>
+                            </div>
+                            <div className="col-2 d-flex flex-column align-items-center">
+                                <i class="fas fa-socks fa-2x"></i>
+                                <h5>Socks</h5>
                             </div>
                             <div className="col-2 d-flex flex-column align-items-center">
                                 <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <h5>T-shirt</h5>
+                            </div>
+                            <div className="col-2 d-flex flex-column align-items-center">
+                                <i class="fas fa-socks fa-2x"></i>
+                                <h5>Socks</h5>
                             </div>
                             <div className="col-2 d-flex flex-column align-items-center">
                                 <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <h5>T-shirt</h5>
                             </div>
                             <div className="col-2 d-flex flex-column align-items-center">
-                                <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
-                            </div>
-                            <div className="col-2 d-flex flex-column align-items-center">
-                                <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
-                            </div>
-                            <div className="col-2 d-flex flex-column align-items-center">
-                                <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <i class="fas fa-socks fa-2x"></i>
+                                <h5>Socks</h5>
                             </div>
                         </div>
                         <div className="row">
                         <div className="col-2 d-flex flex-column align-items-center">
                                 <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <h5>T-shirt</h5>
+                            </div>
+                            <div className="col-2 d-flex flex-column align-items-center">
+                                <i class="fas fa-socks fa-2x"></i>
+                                <h5>Socks</h5>
                             </div>
                             <div className="col-2 d-flex flex-column align-items-center">
                                 <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <h5>T-shirt</h5>
+                            </div>
+                            <div className="col-2 d-flex flex-column align-items-center">
+                                <i class="fas fa-socks fa-2x"></i>
+                                <h5>Socks</h5>
                             </div>
                             <div className="col-2 d-flex flex-column align-items-center">
                                 <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <h5>T-shirt</h5>
                             </div>
                             <div className="col-2 d-flex flex-column align-items-center">
-                                <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
-                            </div>
-                            <div className="col-2 d-flex flex-column align-items-center">
-                                <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
-                            </div>
-                            <div className="col-2 d-flex flex-column align-items-center">
-                                <i class="fas fa-tshirt fa-2x"></i>
-                                <h5>Trousers</h5>
+                                <i class="fas fa-socks fa-2x"></i>
+                                <h5>Socks</h5>
                             </div>
                         </div>
                     </div>

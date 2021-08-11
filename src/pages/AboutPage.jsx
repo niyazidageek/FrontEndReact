@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carousel from 'react-elastic-carousel'
@@ -14,6 +14,11 @@ const ItemsToScroll = {
 }
 
 const AboutPage = () => {
+
+    useEffect(()=>{
+        document.title='About'
+    })
+
     return (
         <div className="about-page">
             <Header />

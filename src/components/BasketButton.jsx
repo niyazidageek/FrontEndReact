@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -11,20 +11,16 @@ const BasketButton = () => {
     const {
         items,
         isEmpty,
-        totalItems,
         totalUniqueItems,
         cartTotal,
-        updateItemQuantity,
-        removeItem,
-        emptyCart
-
+        removeItem
     } = useCart()
 
     
     
     if (isEmpty) return (
         <>
-            <i onClick={() => setOpen(true)} type="button" className="fas fa-shopping-bag fa-lg">
+            <i   onClick={() => setOpen(true)}   className="fas fa-shopping-bag fa-lg">
                 <span className="__badge-cart position-absolute translate-middle badge">
                     {totalUniqueItems}
                 </span>
@@ -38,7 +34,7 @@ const BasketButton = () => {
 
                 <List className="__basket-menu" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                     <ListItem style={{ justifyContent: 'flex-end' }}>
-                        <i onClick={() => setOpen(false)} className="fas fa-times fa-2x"></i>
+                        <i   onClick={() => setOpen(false)} className="fas fa-times fa-2x"></i>
                     </ListItem>
                     <ListItem style={{justifyContent:'center'}}>
                         <h1 className="text-center">Cart is empty</h1>
@@ -54,7 +50,7 @@ const BasketButton = () => {
                                     <Link to="/cart" className="__btn" style={{textDecoration:'none', color:'unset'}}>
                                         <h4>VIEW CART</h4>
                                     </Link>
-                                    <div className="__btn">
+                                    <div type="button" className="__btn">
                                         <h4>CHECKOUT</h4>
                                     </div>
                                 </div>
@@ -69,7 +65,7 @@ const BasketButton = () => {
 
     return (
         <div>
-            <i onClick={() => setOpen(true)} type="button" className="fas fa-shopping-bag fa-lg">
+            <i onClick={() => setOpen(true)}   className="fas fa-shopping-bag fa-lg">
                 <span className="__badge-cart position-absolute translate-middle badge">
                     {totalUniqueItems}
                 </span>
@@ -129,7 +125,7 @@ const BasketButton = () => {
                                     <Link to="/cart" className="__btn" style={{textDecoration:'none', color:'unset'}}>
                                         <h4>VIEW CART</h4>
                                     </Link>
-                                    <div className="__btn">
+                                    <div className="__btn" type='button'>
                                         <h4>CHECKOUT</h4>
                                     </div>
                                 </div>

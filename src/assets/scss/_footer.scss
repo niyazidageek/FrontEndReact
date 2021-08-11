@@ -70,7 +70,26 @@ footer{
                    display: block;
                }
            }
-            
+           & .__footer-li{
+            & ul{
+                li{
+                 &::after{
+                    content: '';
+                    display: block;
+                    height:4px;
+                    border-radius: 4px;
+                    width: 0%;
+                    background-color: black;
+                    @include transition;
+                    }
+                    &:hover{
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
         }
     }
     

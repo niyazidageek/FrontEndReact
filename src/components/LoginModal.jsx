@@ -24,7 +24,7 @@ const LoginModal = () => {
                                 <input type="email" placeholder="E-mail" />
                                 <div className="__password">
                                     <h4>Password</h4>
-                                    <span>Forgot password?</span>
+                                    <span type="button">Forgot password?</span>
                                 </div>
                                 <input type="password" placeholder="Password" />
                             </div>
@@ -46,10 +46,10 @@ const LoginModal = () => {
                             <h5><span>OR</span></h5>
                             <div className="__social-media">
                                 <div className="__box">
-                                    <i class="fab fa-facebook-f"></i>
+                                    <i type="button" class="fab fa-facebook-f"></i>
                                 </div>
                                 <div className="__box">
-                                    <i class="fab fa-google"></i>
+                                    <i type="button" class="fab fa-google"></i>
                                 </div>
                             </div>
                         </div>
@@ -88,10 +88,10 @@ const LoginModal = () => {
                             <h5><span>OR CONNECT WITH</span></h5>
                             <div className="__social-media">
                                 <div className="__box">
-                                    <i class="fab fa-facebook-f"></i>
+                                    <i type="button" class="fab fa-facebook-f"></i>
                                 </div>
                                 <div className="__box">
-                                    <i class="fab fa-google"></i>
+                                    <i type="button" class="fab fa-google"></i>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@ const LoginModal = () => {
 
     return (
         <div>
-            <i onClick={onOpenModal} className="far fa-user fa-lg"></i>
+            <i onClick={onOpenModal} type="button" className="far fa-user fa-lg"></i>
             <Modal
                 open={open}
                 onClose={onCloseModal}
@@ -117,8 +117,8 @@ const LoginModal = () => {
                 <div className="container">
                     <div className="__upper">
                         <div className="container">
-                            <h2 style={{ color: `${colorLog}` }} onClick={() => setPosition('login')}>Login</h2>
-                            <h2 style={{ color: `${colorReg}` }} onClick={() => setPosition('register')}>Register</h2>
+                            <h2 type="button" style={{ color: `${colorLog}` }} onClick={() => setPosition('login')}>Login</h2>
+                            <h2 type="button" style={{ color: `${colorReg}` }} onClick={() => setPosition('register')}>Register</h2>
                         </div>
                     </div>
                     <Content />
